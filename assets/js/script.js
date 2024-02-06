@@ -114,26 +114,41 @@ for (let i = 0; i < filterBtn.length; i++) {
 }
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  // contact form variables
+  const form = document.querySelector("[data-form]");
+  const formInputs = document.querySelectorAll("[data-form-input]");
+  const formBtn = document.querySelector("[data-form-btn]");
 
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+  // Function to check form validity and enable/disable submit button
+  function checkFormValidity() {
+    let isValid = true;
+    formInputs.forEach(function(input) {
+      if (!input.validity.valid) {
+        isValid = false;
+      }
+    });
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
+    if (isValid) {
       formBtn.removeAttribute("disabled");
     } else {
       formBtn.setAttribute("disabled", "");
     }
+  }
 
+  // Add event listeners to form input fields
+  formInputs.forEach(function(input) {
+    input.addEventListener("input", checkFormValidity);
   });
-}
 
+  // Add event listener to form submit button
+  formBtn.addEventListener("click", function() {
+    // Check form validity before submitting
+    if (form.checkValidity()) {
+      form.submit();
+    }
+  });
+});
 
 
 // page navigation variables
