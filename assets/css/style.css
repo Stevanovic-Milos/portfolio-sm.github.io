@@ -2007,7 +2007,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 }
 /* Media query for responsiveness */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   
   /* Adjust avatar box for smaller screens */
   .avatar-box {
@@ -2065,6 +2065,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 }
 @media screen and (min-width: 1250px) {
+  
   /* Adjust avatar box for larger screens */
   .avatar-box {
     display: flex;
