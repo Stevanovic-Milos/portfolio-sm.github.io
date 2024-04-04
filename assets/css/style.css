@@ -455,19 +455,9 @@ main {
   text-decoration: none; /* Remove default underline */
 }
 
-.contact-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: yellow; /* Set underline color */
-  transition: width 0.5s ease; /* Adjust the duration as needed */
-}
-
-.contact-link:hover::after {
-  width: 50%;
+.contact-link:hover{
+  color: yellow;
+  transition: 0.8s ease;
 }
 
 .social-list {
@@ -1113,7 +1103,7 @@ main {
   --scale: 0.8;
 
   background: var(--jet);
-  color: yellow; /* pure yellow */
+  color: yellow;
   position: absolute;
   top: 50%;
   left: 50%;
