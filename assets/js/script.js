@@ -175,3 +175,9 @@ function animateText(index) {
 }
 
 animateText(0);
+function downloadPortfolio() {
+  const link = document.createElement('a');
+  link.href = 'portfolioMS.pdf';  // Path to the portfolio file
+  link.download = 'portfolioMS.pdf';      // The name the file will have when downloaded
+  link.click();                           // Simulates a click to trigger the download
+}

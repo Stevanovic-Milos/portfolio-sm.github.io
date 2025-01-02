@@ -323,29 +323,55 @@ main {
   #SIDEBAR
 \*-----------------------------------*/
 
+/* Sidebar Styling */
 .sidebar {
-  margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 1000px; 
   overflow: hidden;
-  transition: var(--transition-2);
-}
+  transition: var(--transition-2);}
 
 .sidebar.active {
-  max-height: 405px;
+  max-height: 1000px ;
 }
 
+/* Sidebar Info Styling */
 .sidebar-info {
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  padding: 10px; /* Added padding for better spacing */
 }
 
+/* Avatar Box Styling */
 .avatar-box {
+  width: 210px;
+  height: 210px;
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added a subtle shadow for better visual depth */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
 }
+
+.avatar-box:hover {
+  transform : scale(1.05); /* Slightly enlarges the avatar-box on hover */
+}
+
+/* Avatar Image Styling */
+.avatar-box img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 3px solid var(--bg-gradient-onyx); /* Subtle border for the image */
+}
+
+
+
 
 .info-content .name {
   color: var(--white-2);
@@ -975,6 +1001,45 @@ main {
 .filter-list {
   display: flex;
 }
+/* Center the button on the page */
+/* Container for the button */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+/* Styling for the download button */
+.download-btn {
+  position: relative;
+  background: var(--eerie-black-2);  /* Matching background */
+  color: yellow;                    /* Yellow text */
+  padding: 12px 16px;                /* Padding for the button */
+  border: 1px solid var(--jet);     /* Border color */
+  border-radius: 14px;              /* Rounded corners */
+  font-size: var(--fs-6);            /* Same font size */
+  font-weight: var(--fw-300);        /* Same font weight */
+  cursor: pointer;                  /* Pointer cursor */
+  transition: all 0.3s ease;         /* Smooth transition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;                 /* Ensures the arrow stays within the button bounds */
+}
+
+/* Hover effect for the button */
+.download-btn:hover {
+  background-color: var(--jet);     /* Darken the background on hover */
+  transform: scale(1.1);             /* Make the button slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Subtle shadow effect on hover */
+}
+
+
+
+
+
 
 .filter-select-box {
   position: relative;
@@ -1298,6 +1363,14 @@ textarea.form-input::-webkit-resizer {
   .Languges-item-item {
     min-width: calc(33.33% - 10px);
   }
+  .sidebar {
+    max-height: 250px;
+    margin-bottom: 30px;
+  }
+
+  .sidebar.active {
+    max-height: 584px;
+  }
 
   /**
    * #PORTFOLIO, BLOG 
@@ -1307,6 +1380,7 @@ textarea.form-input::-webkit-resizer {
   .blog-banner-box {
     height: auto;
   }
+  
 }
 
 /**
@@ -1374,7 +1448,7 @@ textarea.form-input::-webkit-resizer {
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 250px;
     margin-bottom: 30px;
   }
 
@@ -1385,20 +1459,7 @@ textarea.form-input::-webkit-resizer {
   .sidebar-info {
     gap: 25px;
   }
-  .avatar-box {
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 180px;
-    height: 180px;
-  }
 
-  .avatar-box img {
-    padding-top: 10px;
-    object-fit: cover; /* Optional: Ensure the image fills the container */
-    max-width: 160px;
-  }
 
   .info-content .name {
     margin-bottom: 15px;
@@ -1998,9 +2059,7 @@ textarea.form-input::-webkit-resizer {
     flex-direction: column;
   }
 
-  .avatar-box img {
-    width: 150px;
-  }
+
 
   .info-content .name {
     white-space: nowrap;
@@ -2052,114 +2111,6 @@ textarea.form-input::-webkit-resizer {
     max-width: 700px;
   }
 }
-.avatar-box {
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 140px;
-  height: 140px;
-}
 
-.avatar-box img {
-  padding-top: 10px;
-  object-fit: cover; /* Optional: Ensure the image fills the container */
-  max-width: 130px;
-}
 
-/* Media query for responsiveness */
-@media screen and (max-width: 768px) {
-  .avatar-box {
-    width: 90px; /* Adjust width for smaller screens */
-    height: 90px; /* Adjust height for smaller screens */
-  }
 
-  .avatar-box img {
-    max-width: 80px; /* Adjust max-width for smaller screens */
-  }
-}
-/* Media query for responsiveness */
-@media screen and (max-width: 768px) {
-  .contact-link:hover::after {
-    width: 0%;
-  }
-  /* Adjust avatar box for smaller screens */
-  .avatar-box {
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90px; /* Adjust width for smaller screens */
-    height: 90px; /* Adjust height for smaller screens */
-  }
-
-  /* Adjust avatar image for smaller screens */
-  .avatar-box img {
-    padding-top: 10px;
-    object-fit: cover;
-    max-width: 80px; /* Adjust max-width for smaller screens */
-  }
-
-  .service-item-cer {
-    width: 100%;
-    margin-bottom: 20px; /* Adjust spacing between rows */
-    overflow: hidden;
-    position: relative;
-    border-radius: 14px;
-  }
-
-  /* Style for service icons */
-  .service-icon-box-cer {
-    position: relative;
-    width: 100%;
-    border-radius: 30px;
-    overflow: hidden;
-  }
-
-  .service-icon-box-cer img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 14px;
-  }
-}
-
-/* Media query for larger screens */
-@media screen and (min-width: 1025px) {
-  /* Adjust avatar box for larger screens */
-  .avatar-box {
-    width: 130px; /* Adjust width for larger screens */
-    height: 130px; /* Adjust height for larger screens */
-  }
-
-  /* Adjust avatar image for larger screens */
-  .avatar-box img {
-    max-width: 120px; /* Adjust max-width for larger screens */
-  }
-}
-@media screen and (min-width: 1250px) {
-  /* Adjust avatar box for larger screens */
-  .avatar-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-  }
-
-  .avatar-box img {
-    object-fit: cover; /* Ensure the image fills the container while maintaining aspect ratio */
-    width: 200px;
-    height: 200px; /* Ensure the image fills the circular avatar box */
-  }
-}
-
-@media screen and (max-width: 580px) {
-  /* Adjust avatar box for larger screens */
-  .social-list {
-    display: none;
-  }
-  .filter-item {
-    display: none;
-  }
-}
