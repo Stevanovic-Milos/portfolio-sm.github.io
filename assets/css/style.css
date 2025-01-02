@@ -1377,6 +1377,9 @@ textarea.form-input::-webkit-resizer {
   .blog-banner-box {
     height: auto;
   }
+  .filter-list {
+   display: none;
+  }
   
 }
 
@@ -1672,6 +1675,7 @@ textarea.form-input::-webkit-resizer {
     display: block;
     border-radius: 14px;
   }
+}
 
 /**
  * responsive larger than 768px screen
