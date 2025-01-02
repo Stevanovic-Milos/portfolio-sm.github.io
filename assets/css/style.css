@@ -346,17 +346,6 @@ main {
 }
 
 
-
-.avatar-box {
-  /* Adding transition properties for smooth animation */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.avatar-box:hover {
-  transform: scale(1.1); /* Slightly enlarges the avatar-box on hover */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
-}
-
 /* Avatar Image Styling */
 .avatar-box img {
   width: 190px;
@@ -1368,12 +1357,16 @@ textarea.form-input::-webkit-resizer {
     min-width: calc(33.33% - 10px);
   }
   .sidebar {
-    max-height: 250px;
+    max-height: 200px;
     margin-bottom: 30px;
   }
 
   .sidebar.active {
     max-height: 584px;
+  }
+  .avatar-box img {
+    width: 150px;
+    height: 150px;
   }
 
   /**
@@ -1437,6 +1430,10 @@ textarea.form-input::-webkit-resizer {
     border-radius: 12px;
     font-size: 18px;
   }
+  .avatar-box img {
+    width: 170px;
+    height: 170px;
+  }
 
   /**
    * #MAIN
@@ -1452,7 +1449,7 @@ textarea.form-input::-webkit-resizer {
    */
 
   .sidebar {
-    max-height: 250px;
+    max-height: 300px;
     margin-bottom: 30px;
   }
 
@@ -1676,63 +1673,6 @@ textarea.form-input::-webkit-resizer {
     border-radius: 14px;
   }
 
-  /* Media query for responsiveness */
-  @media screen and (max-width: 768px) {
-    .service-item-cer {
-      width: 100%; /* Set width to 100% for responsiveness */
-    }
-  }
-
-  /**
-   * #PORTFOLIO
-   */
-  .filter-list {
-    display: none;
-  }
-  .project-img {
-    border-radius: 16px;
-  }
-
-  .blog-posts-list {
-    gap: 30px;
-  }
-
-  .blog-content {
-    padding: 25px;
-  }
-
-  /**
-   * #CONTACT
-   */
-
-  .mapbox {
-    height: 380px;
-    border-radius: 18px;
-  }
-
-  .input-wrapper {
-    gap: 30px;
-    margin-bottom: 30px;
-  }
-
-  .form-input {
-    padding: 15px 20px;
-  }
-
-  textarea.form-input {
-    margin-bottom: 30px;
-  }
-
-  .form-btn {
-    --fs-6: 16px;
-    padding: 16px 20px;
-  }
-
-  .form-btn ion-icon {
-    font-size: 18px;
-  }
-}
-
 /**
  * responsive larger than 768px screen
  */
@@ -1782,6 +1722,11 @@ textarea.form-input::-webkit-resizer {
   .modal-avatar-box img {
     width: 80px;
   }
+  .avatar-box img {
+    width: 200px;
+    height: 200px;
+  }
+
 
   /**
    * PORTFOLIO
@@ -2114,6 +2059,11 @@ textarea.form-input::-webkit-resizer {
   .timeline-text {
     max-width: 700px;
   }
+  .avatar-box img {
+    width: 230px;
+    height: 230px;
+  }
+
 }
 
 
