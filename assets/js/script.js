@@ -181,3 +181,24 @@ function downloadPortfolio() {
   link.download = 'portfolioMS.pdf';      // The name the file will have when downloaded
   link.click();                           // Simulates a click to trigger the download
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const serviceItems = document.querySelectorAll(".service-item");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Stop observing once it's visible
+        }
+      });
+    },
+    {
+      threshold: 0.2, // Trigger when 20% of the element is visible
+    }
+  );
+
+  serviceItems.forEach((item) => {
+    observer.observe(item);
+  });
+});
