@@ -280,3 +280,22 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(item);
   });
 });
+  window.addEventListener('load', function() {
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 120
+        },
+        size: {
+          value: 1
+        },
+        move: {
+          enable: true,
+          speed: 1
+        },
+        shape: {
+          type: "circle"
+        }
+      }
+    });
+  });
