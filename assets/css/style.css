@@ -150,8 +150,8 @@ hsl(40, 30%, 55%); /* Warm golden tint for depth */
 .theme-switch {
   position: relative;
   display: inline-block;
-  width: 40px; /* Reduced width for responsiveness */
-  height: 24px; /* Reduced height for responsiveness */
+  width: 30px; /* Even smaller width */
+  height: 18px; /* Even smaller height */
 }
 
 .theme-switch input {
@@ -169,14 +169,14 @@ hsl(40, 30%, 55%); /* Warm golden tint for depth */
   bottom: 0;
   background-color: var(--eerie-black-1); /* Default dark color */
   transition: 0.4s;
-  border-radius: 20px; /* Adjusted border radius */
+  border-radius: 15px; /* Adjusted border radius for the smaller size */
   display: flex;
   justify-content: space-between; /* Align sun and moon evenly */
   align-items: center; /* Vertically center sun and moon */
 }
 
 .sun, .moon {
-  font-size: 12px; /* Reduced font size for better scaling */
+  font-size: 10px; /* Further reduced font size */
   transition: 0.4s;
   position: absolute;
   top: 50%;
@@ -184,13 +184,15 @@ hsl(40, 30%, 55%); /* Warm golden tint for depth */
 }
 
 .sun {
-  right: 6px; /* Position sun on the right */
+  margin-right: 1px;
+  right: 4px; /* Position sun on the right */
   color: yellow; /* Warm yellow color for the sun */
   opacity: 0; /* Hide sun initially */
 }
 
 .moon {
-  left: 6px; /* Position moon on the left */
+  margin-left: 1px;
+  left: 4px; /* Position moon on the left */
   opacity: 1; /* Show moon initially */
   color: var(--eerie-black-1); /* Off-white color for the moon */
 }
@@ -208,7 +210,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(16px); /* Adjusted movement for smaller size */
+  transform: translateX(12px); /* Adjusted movement for smaller size */
   background-color: var(--light-white-1); /* Lighter color for the knob when toggled */
 }
 
@@ -219,8 +221,8 @@ input:not(:checked) + .slider {
 .slider:before {
   position: absolute;
   content: "";
-  height: 18px; /* Reduced height of the knob */
-  width: 18px; /* Reduced width of the knob */
+  height: 12px; /* Further reduced height of the knob */
+  width: 12px; /* Further reduced width of the knob */
   border-radius: 50%; /* Keeping the knob round */
   left: 3px; /* Adjusted position */
   bottom: 3px; /* Adjusted position */
@@ -229,9 +231,10 @@ input:not(:checked) + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(16px); /* Adjusted knob position */
+  transform: translateX(12px); /* Adjusted knob position */
   background-color: var(--light-white-1); /* Lighter color for the knob when toggled */
 }
+
 
 
 /*-----------------------------------*\
