@@ -203,4 +203,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Select the avatar box
+const avatarBox = document.querySelector('.avatar-box img');
+
+// Add a click event listener
+avatarBox.addEventListener('click', () => {
+  // Add the animation class
+  avatarBox.classList.add('animate');
+
+  // Remove the class after the animation ends to allow re-triggering
+  avatarBox.addEventListener('animationend', () => {
+    avatarBox.classList.remove('animate');
+  }, { once: true });
+});
 

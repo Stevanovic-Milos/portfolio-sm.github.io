@@ -406,9 +406,6 @@ main {
   border: solid 10px var(--onyx);
   transition: border-color 0.3s ease, transform 0.3s ease; /* Smooth transition for border and scale */
 
-  /* Initial transform state for the coin flip */
-  transform: rotateY(0);
-  animation: coin-flip 1.5s ease-out; /* Coin flip animation */
 }
 
 /* Keyframes for the coin flip animation */
@@ -429,8 +426,9 @@ main {
   transform: scale(1.05); /* Slight zoom effect on the image */
   border-color: var(--onyx); /* Optional: Change border color on hover */
 }
-
-
+.avatar-box img.animate {
+  animation: coin-flip 1.5s ease-out;
+}
 
 
 
@@ -444,7 +442,7 @@ main {
 
 .info-content .title {
   color: var(--white-1);
-  background: var(--onyx);
+  background: var(--bg-gradient-jet);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
   width: max-content;
@@ -489,6 +487,7 @@ main {
 .info_more-btn span {
   display: none;
 }
+
 
 .sidebar-info_more {
   opacity: 0;
@@ -1101,7 +1100,7 @@ main {
 
 /* Hover effect for the button */
 .download-btn:hover {
-  background-color: var(--jet);     /* Darken the background on hover */
+  background: var(--bg-gradient-jet);     /* Darken the background on hover */
   transform: scale(1.1);             /* Make the button slightly bigger */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Subtle shadow effect on hover */
 }
