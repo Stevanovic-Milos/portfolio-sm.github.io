@@ -765,7 +765,7 @@ main {
 /* Apply animation to testimonials-item */
 .testimonials-item {
   min-width: 100%;
-  scroll-snap-align: center;
+  scroll-snap-align: left;
   opacity: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
