@@ -767,7 +767,6 @@ main {
   min-width: 100%;
   scroll-snap-align: center;
   opacity: 0;
-  transform: translateX(30px); /* Match the initial position of the animation */
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
