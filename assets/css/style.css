@@ -389,7 +389,7 @@ main {
   top: -15px;
   right: -15px;
   border-radius: 0 15px;
-  font-size: 13px;
+  font-size: 15px;
   color: yellow;
   background: var(--border-gradient-onyx);
   padding: 10px;
@@ -1007,31 +1007,29 @@ main {
 }
 /* Center the button on the page */
 /* Container for the button */
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-  gap: 20px;
-}
+
 
 /* Styling for the download button */
 .download-btn {
   position: relative;
   background: var(--eerie-black-2);  /* Matching background */
   color: yellow;                    /* Yellow text */
-  padding: 12px 16px;                /* Padding for the button */
+  padding: 8px 12px;                /* Reduced padding for a smaller button */
   border: 1px solid var(--jet);     /* Border color */
-  border-radius: 14px;              /* Rounded corners */
-  font-size: var(--fs-6);            /* Same font size */
-  font-weight: var(--fw-300);        /* Same font weight */
+  border-radius: 8px;               /* Reduced border radius for less rounded corners */
+  font-size: var(--fs-7);           /* Smaller font size */
+  font-weight: var(--fw-300);       /* Same font weight */
   cursor: pointer;                  /* Pointer cursor */
-  transition: all 0.3s ease;         /* Smooth transition */
+  transition: all 0.3s ease;        /* Smooth transition */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;              /* Center-align content vertically */
   overflow: hidden;                 /* Ensures the arrow stays within the button bounds */
+  margin: 20px auto;                /* Centers horizontally and reduces gap above */
+  width: max-content;               /* Adjusts to content width */
 }
+
+
 
 /* Hover effect for the button */
 .download-btn:hover {
@@ -1375,6 +1373,11 @@ textarea.form-input::-webkit-resizer {
   }
   .service-container-cer {
     display: flex; /* Ensure items are flex items */
+  }
+  .download-btn {
+    margin: 20px 0;                 /* Removes auto centering */
+    width: auto;                    /* Ensures the button stretches as needed */
+    justify-content: flex-start;    /* Aligns content to the left */
   }
   
   .service-container-cer > * {
@@ -1725,7 +1728,11 @@ textarea.form-input::-webkit-resizer {
     grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
   }
-
+  .download-btn {
+    margin: 20px 0;                 /* Removes auto centering */
+    width: auto;                    /* Ensures the button stretches as needed */
+    justify-content: flex-start;    /* Aligns content to the left */
+  }
   /**
    * NAVBAR
    */
@@ -2083,6 +2090,26 @@ textarea.form-input::-webkit-resizer {
     width: 230px;
     height: 230px;
   }
+  .download-btn {
+    position: relative;
+    background: var(--eerie-black-2);  /* Matching background */
+    color: yellow;                    /* Yellow text */
+    padding: 8px 12px;                /* Reduced padding for a smaller button */
+    border: 1px solid var(--jet);     /* Border color */
+    border-radius: 8px;               /* Reduced border radius for less rounded corners */
+    font-size: var(--fs-7);           /* Smaller font size */
+    font-weight: var(--fw-300);       /* Same font weight */
+    cursor: pointer;                  /* Pointer cursor */
+    transition: all 0.3s ease;        /* Smooth transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;              /* Center-align content vertically */
+    overflow: hidden;                 /* Ensures the arrow stays within the button bounds */
+    margin: 20px auto;                /* Centers horizontally and reduces gap above */
+    width: max-content;               /* Adjusts to content width */
+}
+
+
 
 }
 
