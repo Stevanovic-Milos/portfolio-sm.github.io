@@ -750,10 +750,31 @@ main {
   scroll-snap-type: inline mandatory;
 }
 
+/* Keyframes for slide animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to testimonials-item */
 .testimonials-item {
   min-width: 100%;
   scroll-snap-align: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+.testimonials-item.visible {
+  animation: slideIn 0.5s ease forwards;
+}
+
 
 .testimonials-avatar-box {
   position: absolute;
@@ -962,9 +983,30 @@ main {
   margin-left: 45px;
 }
 
-.timeline-item {
-  position: relative;
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+/* Initial state for timeline items */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Add the `visible` class to trigger the animation */
+.timeline-item.visible {
+  animation: fadeIn 0.8s ease forwards;
+}
+
 
 .timeline-item:not(:last-child) {
   margin-bottom: 20px;
@@ -1027,13 +1069,38 @@ main {
 }
 
 /* Style for each service item */
-.service-item-cer {
-  width: calc(50% - 20px); /* Adjust as needed */
-  margin-bottom: 20px; /* Adjust spacing between rows */
-  overflow: hidden;
-  position: relative;
-  border-radius: 14px;
+/* Keyframes for slide-in from left */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+/* Initial state for service items */
+.service-item-cer {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Add visible class to trigger animation */
+.service-item-cer.visible {
+  animation: slideInFromLeft 0.7s ease forwards;
+}
+
+/* Optional: Adding staggered delay for the animation */
+.service-item-cer:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+.service-item-cer:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
 
 /* Style for service icons */
 .service-icon-box-cer {

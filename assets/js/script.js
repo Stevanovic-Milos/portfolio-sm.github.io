@@ -217,3 +217,66 @@ avatarBox.addEventListener('click', () => {
   }, { once: true });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const testimonials = document.querySelectorAll(".testimonials-item");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Adjust threshold as needed
+    }
+  );
+
+  testimonials.forEach((testimonial) => {
+    observer.observe(testimonial);
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const timelineItems = document.querySelectorAll(".timeline-item");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Adjust to control when the animation starts (50% visibility)
+    }
+  );
+
+  timelineItems.forEach((item) => {
+    observer.observe(item);
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const serviceItems = document.querySelectorAll(".service-item-cer");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Add `visible` class with delay for each row
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, index * 150); // Stagger delay between items
+        }
+      });
+    },
+    {
+      threshold: 0.1, // Adjust to control when the animation starts
+    }
+  );
+
+  serviceItems.forEach((item) => {
+    observer.observe(item);
+  });
+});
