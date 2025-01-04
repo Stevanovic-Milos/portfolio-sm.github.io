@@ -1,51 +1,110 @@
 :root {
+  /* New Gradients */
   --bg-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(240, 1%, 25%) 3%,
-    hsl(0, 0%, 19%) 97%
+    hsl(170, 40%, 20%) 5%, /* A cool, dark teal */
+    hsl(190, 30%, 15%) 95% /* Darker, muted teal */
   );
+
   --bg-gradient-jet: linear-gradient(
-      to bottom right,
-      hsla(240, 1%, 18%, 0.251) 0%,
-      hsla(240, 2%, 11%, 0) 100%
-    ),
-    hsl(240, 2%, 13%);
+    to bottom right,
+    hsla(150, 5%, 10%, 0.4) 0%, /* Soft, cool charcoal */
+    hsla(180, 10%, 5%, 0) 100%
+  ),
+  hsl(160, 15%, 7%); /* Deep, smoky teal for a rich feel */
+
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right,
-    hsl(45, 100%, 71%) 0%,
-    hsla(36, 100%, 69%, 0) 50%
+    hsl(60, 100%, 50%) 0%, /* Bright lemon yellow */
+    hsla(50, 100%, 45%, 0) 50%
   );
+
   --bg-gradient-yellow-2: linear-gradient(
-      135deg,
-      hsla(45, 100%, 71%, 0.251) 0%,
-      hsla(35, 100%, 68%, 0) 59.86%
-    ),
-    hsl(240, 2%, 13%);
+    135deg,
+    hsla(60, 100%, 50%, 0.3) 0%, /* Softer, golden yellow */
+    hsla(55, 100%, 45%, 0) 60%
+  ),
+  hsl(40, 30%, 10%); /* Darker background with a golden tint */
+
   --border-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(0, 0%, 25%) 0%,
-    hsla(0, 0%, 25%, 0) 50%
+    hsl(190, 30%, 10%) 0%, /* Muted, dark teal border */
+    hsla(180, 20%, 5%, 0) 50%
   );
+
   --text-gradient-yellow: linear-gradient(
     to right,
-    hsl(45, 100%, 72%),
-    hsl(35, 100%, 68%)
+    hsl(60, 100%, 40%), /* Deep lemon yellow */
+    hsl(50, 90%, 45%) /* Rich, golden yellow */
   );
 
-  /* solid */
+  /* New Solid Colors */
+  --jet: hsl(210, 20%, 15%); /* Cool, dark slate gray */
+  --onyx: hsl(160, 20%, 10%); /* Dark teal with subtle tones */
+  --eerie-black-1: hsl(200, 15%, 7%); /* Darker, muted blue-black */
+  --eerie-black-2: hsl(190, 10%, 5%); /* Very dark blue with almost black shades */
+  --smoky-black: hsl(0, 0%, 3%); /* Deep, almost pure black */
+  --white-1: hsl(0, 0%, 98%); /* Off-white for a soft, subtle contrast */
+  --white-2: hsl(0, 0%, 85%); /* Muted white with a light cream tint */
+  --orange-yellow-crayola: hsl(45, 100%, 58%); /* Slightly darker, burnt yellow */
+  --vegas-gold: hsl(45, 60%, 50%); /* Warm, medium gold */
+  --light-gray: hsl(0, 0%, 70%); /* Neutral, balanced gray */
+  --light-gray-70: hsla(0, 0%, 70%, 0.7); /* Semi-transparent light gray */
+  --bittersweet-shimmer: hsl(10, 70%, 60%); /* Warm reddish amber with a golden tone */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+
+/* Light Mode Gradients */
+--bg-gradient-light-onyx: linear-gradient(
+  to bottom right,
+  hsl(170, 40%, 55%) 5%, /* Muted teal with a bit more warmth */
+  hsl(190, 30%, 70%) 95% /* Softer teal */
+);
+
+--bg-gradient-light-jet: linear-gradient(
+  to bottom right,
+  hsla(150, 5%, 80%, 0.4) 0%, /* Light, soft charcoal */
+  hsla(180, 10%, 90%, 0) 100%
+),
+hsl(160, 15%, 60%); /* Smoky teal with a more natural light tone */
+
+--bg-gradient-light-yellow-1: linear-gradient(
+  to bottom right,
+  hsl(60, 100%, 75%) 0%, /* Soft lemon yellow */
+  hsla(50, 100%, 70%, 0) 50%
+);
+
+--bg-gradient-light-yellow-2: linear-gradient(
+  135deg,
+  hsla(60, 100%, 75%, 0.3) 0%, /* Softer golden yellow */
+  hsla(55, 100%, 65%, 0) 60%
+),
+hsl(40, 30%, 55%); /* Warm golden tint for depth */
+
+--border-gradient-light-onyx: linear-gradient(
+  to bottom right,
+  hsl(190, 30%, 65%) 0%, /* Muted, medium-light teal border */
+  hsla(180, 20%, 85%, 0) 50%
+);
+
+--text-gradient-light-yellow: linear-gradient(
+  to right,
+  hsl(60, 100%, 60%), /* Warm lemon yellow */
+  hsl(50, 90%, 50%) /* Soft golden yellow */
+);
+
+/* Light Mode Solid Colors */
+--light-jet: hsl(210, 20%, 65%); /* Cool, medium slate gray */
+--light-onyx: hsl(160, 20%, 50%); /* Balanced teal with some lightness */
+--light-eerie-black-1: hsl(200, 15%, 75%); /* Subtle light blue-black */
+--light-eerie-black-2: hsl(190, 10%, 70%); /* Softer, light dark blue */
+--light-smoky-black: hsl(0, 0%, 90%); /* Light, neutral black */
+--light-white-1: hsl(0, 0%, 98%); /* Clean off-white */
+--light-white-2: hsl(0, 0%, 90%); /* Slightly warmer white */
+--light-orange-yellow-crayola: hsl(45, 100%, 80%); /* Soft warm yellow */
+--light-vegas-gold: hsl(45, 60%, 55%); /* Muted medium gold */
+--light-light-gray: hsl(0, 0%, 85%); /* Balanced, soft gray */
+--light-light-gray-70: hsla(0, 0%, 85%, 0.7); /* Semi-transparent light gray */
+--light-bittersweet-shimmer: hsl(10, 70%, 70%); /* Warm reddish amber with golden tones */
 
   /**
    * typography
@@ -87,6 +146,95 @@
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
 }
+/* Toggle Switch Style */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px; /* Reduced width */
+  height: 30px; /* Reduced height */
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--eerie-black-1); /* Default dark color */
+  transition: 0.4s;
+  border-radius: 30px; /* Adjusted border radius for the new size */
+  display: flex;
+  justify-content: space-between; /* Align sun and moon evenly */
+  align-items: center; /* Vertically center sun and moon */
+}
+
+.sun, .moon {
+  font-size: 16px; /* Reduced font size */
+  transition: 0.4s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center */
+}
+
+.sun {
+  margin-right: 1px;
+  right: 6px; /* Position sun on the right */
+  color: yellow; /* Warm yellow color for the sun */
+  opacity: 0; /* Hide sun initially */
+}
+
+.moon {
+  margin-left: 1px;
+  left: 6px; /* Position moon on the left */
+  opacity: 1; /* Show moon initially */
+  color: var(--eerie-black-1); /* Off-white color for the moon */
+}
+
+input:checked + .slider .sun {
+  opacity: 1; /* Show sun when toggle is in light mode */
+}
+
+input:checked + .slider .moon {
+  opacity: 0; /* Hide moon when toggle is in light mode */
+}
+
+input:checked + .slider {
+  background-color: var(--eerie-black-1); /* Keep dark background when sun is visible */
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px); /* Adjusted movement for smaller size */
+  background-color: var(--light-white-1); /* Lighter color for the knob when toggled */
+}
+
+input:not(:checked) + .slider {
+  background-color: var(--light-white-1); /* Darker background for the slider in moon mode */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px; /* Reduced height of the knob */
+  width: 22px; /* Reduced width of the knob */
+  border-radius: 50%; /* Keeping the knob round */
+  left: 4px; /* Adjusted position */
+  bottom: 4px; /* Adjusted position */
+  background-color: var(--eerie-black-1); /* Softer gray for the toggle knob */
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px); /* Adjusted knob position */
+  background-color: var(--light-white-1); /* Lighter color for the knob when toggled */
+}
+
 
 /*-----------------------------------*\
   #RESET
@@ -146,10 +294,16 @@ html {
   font-family: var(--ff-poppins);
 }
 
+
 body {
-  background: var(--smoky-black);
+  background-color: var(--smoky-black); /* Default dark mode background */
+  transition: background-color 0.4s, color 0.4s;
 }
 
+body.light-theme {
+  background-color: var(--light-white-1); /* Light background */
+  color: var(--eerie-black-1);
+}
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -169,6 +323,7 @@ article {
   text-align: center;
   color: var(--light-gray);
 }
+
 
 
 /* CSS for the separator */

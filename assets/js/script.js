@@ -202,3 +202,27 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(item);
   });
 });
+// Get the theme toggle checkbox
+const themeToggle = document.getElementById("theme-toggle");
+
+// Check the saved theme in localStorage (if any) when the page loads
+if (localStorage.getItem('theme') === 'light') {
+  document.body.classList.add('light-theme');
+  themeToggle.checked = true; // Keep the toggle in sync with the theme
+} else {
+  // If no theme is saved or it's dark, ensure dark mode is applied
+  document.body.classList.remove('light-theme');
+  themeToggle.checked = false; // Keep the toggle in sync with the theme
+}
+
+// Listen for change events on the theme toggle checkbox
+themeToggle.addEventListener('change', function() {
+  if (themeToggle.checked) {
+    document.body.classList.add('light-theme');
+    localStorage.setItem('theme', 'light'); // Save light theme preference
+  } else {
+    document.body.classList.remove('light-theme');
+    localStorage.setItem('theme', 'dark'); // Save dark theme preference
+  }
+});
+
