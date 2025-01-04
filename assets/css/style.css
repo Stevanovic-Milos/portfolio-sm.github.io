@@ -92,19 +92,6 @@ hsl(40, 30%, 55%); /* Warm golden tint for depth */
   hsl(50, 90%, 50%) /* Soft golden yellow */
 );
 
-/* Light Mode Solid Colors */
---light-jet: hsl(210, 20%, 65%); /* Cool, medium slate gray */
---light-onyx: hsl(160, 20%, 50%); /* Balanced teal with some lightness */
---light-eerie-black-1: hsl(200, 15%, 75%); /* Subtle light blue-black */
---light-eerie-black-2: hsl(190, 10%, 70%); /* Softer, light dark blue */
---light-smoky-black: hsl(0, 0%, 90%); /* Light, neutral black */
---light-white-1: hsl(0, 0%, 98%); /* Clean off-white */
---light-white-2: hsl(0, 0%, 90%); /* Slightly warmer white */
---light-orange-yellow-crayola: hsl(45, 100%, 80%); /* Soft warm yellow */
---light-vegas-gold: hsl(45, 60%, 55%); /* Muted medium gold */
---light-light-gray: hsl(0, 0%, 85%); /* Balanced, soft gray */
---light-light-gray-70: hsla(0, 0%, 85%, 0.7); /* Semi-transparent light gray */
---light-bittersweet-shimmer: hsl(10, 70%, 70%); /* Warm reddish amber with golden tones */
 
   /**
    * typography
@@ -146,96 +133,6 @@ hsl(40, 30%, 55%); /* Warm golden tint for depth */
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
 }
-/* Toggle Switch Style */
-.theme-switch {
-  position: relative;
-  display: inline-block;
-  width: 24px; /* Slightly larger width */
-  height: 16px; /* Slightly larger height */
-}
-
-.theme-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--eerie-black-1); /* Default dark color */
-  transition: 0.4s;
-  border-radius: 12px; /* Adjusted border radius for the new size */
-  display: flex;
-  justify-content: space-between; /* Align sun and moon evenly */
-  align-items: center; /* Vertically center sun and moon */
-}
-
-.sun, .moon {
-  font-size: 10px; /* Slightly larger font size */
-  transition: 0.4s;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); /* Vertically center */
-}
-
-.sun {
-  margin-right: 1px;
-  right: 3px; /* Position sun on the right */
-  color: yellow; /* Warm yellow color for the sun */
-  opacity: 0; /* Hide sun initially */
-}
-
-.moon {
-  margin-left: 1px;
-  left: 3px; /* Position moon on the left */
-  opacity: 1; /* Show moon initially */
-  color: var(--eerie-black-1); /* Off-white color for the moon */
-}
-
-input:checked + .slider .sun {
-  opacity: 1; /* Show sun when toggle is in light mode */
-}
-
-input:checked + .slider .moon {
-  opacity: 0; /* Hide moon when toggle is in light mode */
-}
-
-input:checked + .slider {
-  background-color: var(--eerie-black-1); /* Keep dark background when sun is visible */
-}
-
-input:checked + .slider:before {
-  transform: translateX(12px); /* Adjusted movement for larger size */
-  background-color: var(--light-white-1); /* Lighter color for the knob when toggled */
-}
-
-input:not(:checked) + .slider {
-  background-color: var(--light-white-1); /* Darker background for the slider in moon mode */
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 10px; /* Slightly larger height of the knob */
-  width: 10px; /* Slightly larger width of the knob */
-  border-radius: 50%; /* Keeping the knob round */
-  left: 3px; /* Adjusted position */
-  bottom: 3px; /* Adjusted position */
-  background-color: var(--eerie-black-1); /* Softer gray for the toggle knob */
-  transition: 0.4s;
-}
-
-input:checked + .slider:before {
-  transform: translateX(12px); /* Adjusted knob position */
-  background-color: var(--light-white-1); /* Lighter color for the knob when toggled */
-}
-
-
 
 
 /*-----------------------------------*\
@@ -302,10 +199,6 @@ body {
   transition: background-color 0.4s, color 0.4s;
 }
 
-body.light-theme {
-  background-color: var(--light-white-1); /* Light background */
-  color: var(--eerie-black-1);
-}
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -1541,9 +1434,7 @@ textarea.form-input::-webkit-resizer {
     width: 100%; /* Ensure each item takes the full width of the container */
     box-sizing: border-box; /* Prevent padding/borders from affecting layout */
   }
-  .navbar-item{
-    font: 1px;
-  }
+  
 
   .sidebar.active {
     max-height: 584px;
