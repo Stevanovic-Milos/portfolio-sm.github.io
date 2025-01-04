@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
     particlesJS("particles-js", {
       particles: {
         number: {
-          value: 120
+          value: 100
         },
         size: {
           value: 1
