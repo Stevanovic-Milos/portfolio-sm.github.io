@@ -154,7 +154,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 const textLines = [
   "Success is not just about doing things; it's about doing them right.",
-  " Hi there! I'm Milos, a diligent student with a passion for learning and a commitment to excellence. Welcome to my online portfolio, where you'll find a showcase of my journey and capabilities. Let's connect and explore how I can contribute to your team's success."
+  " Hi there! I'm Milos, a diligent student with a passion for learning and a commitment to excellence. Welcome to my portfolio, where you'll find a showcase of my journey and capabilities. Let's connect and explore how I can contribute to your team's success."
 ];
 
 const lineElements = document.querySelectorAll(".about-text p");
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }, {
-      threshold: 0.4, // Trigger when 20% of the element is visible
+      threshold: 0., // Trigger when 20% of the element is visible
     }
   );
 

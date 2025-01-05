@@ -2329,7 +2329,7 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 0;
     padding-top: 60px;
     z-index: 1;
-    animation: slideInn 0.8s ease;
+    animation: slideside 0.8s ease;
     
       
     
@@ -2338,7 +2338,7 @@ textarea.form-input::-webkit-resizer {
   .sidebar-info {
     flex-direction: column;
   }
-
+  
 
 
   .info-content .name {
