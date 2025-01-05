@@ -306,14 +306,6 @@ window.addEventListener('load', function() {
         out_mode: "out"
       }
     },
-    interactivity: {
-      events: {
-        onhover: {
-          enable: true,
-          mode: "repulse"
-        }
-      }
-    },
     retina_detect: true
   });
   
