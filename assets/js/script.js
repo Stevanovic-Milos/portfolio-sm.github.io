@@ -289,7 +289,7 @@ window.addEventListener('load', function() {
   particlesJS("particles-js", {
     particles: {
       number: {
-        value: 150
+        value: 100
       },
       size: {
         value: 1
