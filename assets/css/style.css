@@ -302,8 +302,18 @@ article {
 article.active {
   display: block;
 }
-
 @keyframes slideInn {
+  0% {
+    transform: translateY(0); /* Start at the original position */
+  }
+  50% {
+    transform: translateY(100%); /* Slide completely down */
+  }
+  100% {
+    transform: translateY(0); /* Slide back up to the original position */
+  }
+}
+@keyframes slideside {
   0% {
     transform: translateY(100%);
   }
@@ -314,13 +324,16 @@ article.active {
 }
 @keyframes slideOnn {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(0);
   }
- 
+  50% {
+    transform: translateY(-150%);
+  }
   100% {
-    transform: translateY(0%);
+    transform: translateY(0);
   }
 }
+
 
 
 .h2,
@@ -752,6 +765,16 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
+
+  /* Start off-screen and hidden */
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.service-item.visible {
+  transform: translateY(0); /* Slide into original position */
+  opacity: 1; /* Fully visible */
 }
 
 
@@ -1609,12 +1632,12 @@ textarea.form-input::-webkit-resizer {
   }
   article.active {
     display: block;
-    animation: slideInn 0.5s ease ;
+    animation: slideInn 0.8s ease ;
   }
   .sidebar {
     max-height: 200px;
     margin-bottom: 30px;
-    animation: slideOnn 0.5s ease;
+    animation: slideOnn 0.8s ease;
 
   }
   .about-text p {
@@ -2306,7 +2329,7 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 0;
     padding-top: 60px;
     z-index: 1;
-    animation: slideInn 0.5s ease;
+    animation: slideInn 0.8s ease;
     
       
     

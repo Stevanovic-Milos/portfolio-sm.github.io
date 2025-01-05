@@ -181,7 +181,7 @@ function animateText(index) {
 }
 
 // Check if the screen size is smaller than 768px (adjust as needed)
-if (window.innerWidth > 1250) {
+if (window.innerWidth > 100) {
   // Only run typing animation for larger screens
   animateText(0);
 } else {
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }, {
-      threshold: 0.2, // Trigger when 20% of the element is visible
+      threshold: 0.4, // Trigger when 20% of the element is visible
     }
   );
 
