@@ -743,17 +743,8 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
-
-  /* Hidden initially */
-  transform: translateY(100px);
-  opacity: 0;
-  transition: transform 0.7s ease-in-out;
 }
 
-.service-item.visible {
-  transform: translateY(0);
-  opacity: 1;
-}
 
 
 .service-item::before {
@@ -1609,12 +1600,12 @@ textarea.form-input::-webkit-resizer {
   }
   article.active {
     display: block;
-    animation: slideInn 0.7s ease ;
+    animation: slideInn 1s ease ;
   }
   .sidebar {
     max-height: 200px;
     margin-bottom: 30px;
-    animation: slideInn 0.7s ease;
+    animation: slideInn 1s ease;
 
   }
   .about-text p {
