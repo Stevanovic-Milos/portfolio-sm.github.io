@@ -482,20 +482,22 @@ main {
   /* Smooth transition for opacity */
 }
 
-/* Keyframes for a fast spin around itself with blur effect */
-@keyframes fast-spin-blur {
+/* Keyframes for a fast spin with zoom effect */
+@keyframes fast-spin-zoom {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(0.1); /* Start smaller and rotated */
     opacity: 1;
   }
   100% {
-    transform: rotate(720deg); /* Complete the full 2 rotations */
-    opacity: 1; /* Restore full opacity */
+    transform: rotate(720deg) scale(1); /* Complete the full rotation and zoom to normal size */
+    opacity: 1;
   }
 }
 
+
+
 .avatar-box img.animate {
-  animation: fast-spin-blur 0.6s ease-out; /* Spin with blur, 0.8s duration */
+  animation: fast-spin-zoom 0.6s ease; /* Spin with blur, 0.8s duration */
   /* Fast rotation with blur effect */
 }
 
