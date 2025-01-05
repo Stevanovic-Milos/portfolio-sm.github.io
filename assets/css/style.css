@@ -538,6 +538,10 @@ main {
   padding: 10px;
   transition: var(--transition-1);
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .info_more-btn::before {
@@ -550,19 +554,18 @@ main {
   z-index: -1;
 }
 
-.info_more-btn:hover,
-.info_more-btn:focus {
-  background: var(--bg-gradient-yellow-1);
-}
-
-.info_more-btn:hover::before,
-.info_more-btn:focus::before {
-  background: var(--bg-gradient-yellow-2);
-}
-
 .info_more-btn span {
-  display: none;
+  display: none; /* Hide text */
 }
+
+.info_more-btn ion-icon {
+  transition: transform 0.3s ease; /* Smooth transition for the rotation */
+}
+
+.info_more-btn.opened ion-icon {
+  transform: rotate(180deg); /* Rotate ion-icon when button is opened */
+}
+
 
 
 .sidebar-info_more {

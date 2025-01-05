@@ -322,3 +322,7 @@ window.addEventListener('load', function() {
   });
   
 });
+const button = document.querySelector('.info_more-btn');
+button.addEventListener('click', () => {
+  button.classList.toggle('opened');
+});
