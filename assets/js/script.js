@@ -14,7 +14,7 @@ avatar.addEventListener('click', () => {
     // Cycle through the images array
     currentIndex = (currentIndex + 1) % images.length; // This ensures it loops back to the first image
     avatar.src = images[currentIndex];
-  }, 100); // Wait until halfway through the 0.8s animation
+  }, 300); // Wait until halfway through the 0.8s animation
 
   // Remove the animation class after the animation ends
   avatar.addEventListener(
