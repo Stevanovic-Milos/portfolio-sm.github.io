@@ -497,8 +497,6 @@ main {
 
 
 .avatar-box:hover img {
-  transform: scale(1.05);
-  /* Slight zoom effect on the image */
   border-color: var(--onyx);
   /* Optional: Change border color on hover */
 }
@@ -525,6 +523,7 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .info_more-btn {
@@ -542,6 +541,7 @@ main {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .info_more-btn::before {
@@ -559,12 +559,24 @@ main {
 }
 
 .info_more-btn ion-icon {
-  transition: transform 0.3s ease; /* Smooth transition for the rotation */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth rotation and color change */
 }
 
 .info_more-btn.opened ion-icon {
   transform: rotate(180deg); /* Rotate ion-icon when button is opened */
+  color: #f1c40f; /* New color when opened */
 }
+
+.info_more-btn:hover {
+  background: var(--bg-gradient-dark); /* Darker background when hovered */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on hover */
+}
+
+.info_more-btn.opened:hover {
+  background: var(--bg-gradient-light); /* Different background when opened and hovered */
+}
+
+
 
 
 
@@ -1277,7 +1289,6 @@ main {
   /* Center-align content vertically */
   overflow: hidden;
   /* Ensures the arrow stays within the button bounds */
-  margin: 20px auto;
   /* Centers horizontally and reduces gap above */
   width: max-content;
   /* Adjusts to content width */
@@ -1644,7 +1655,7 @@ textarea.form-input::-webkit-resizer {
   
   .sidebar {
     max-height: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     animation: slideOnn 0.5s ease;
 
   }
@@ -1659,7 +1670,6 @@ textarea.form-input::-webkit-resizer {
   }
 
   .download-btn {
-    margin: 20px 0;
     /* Removes auto centering */
     width: auto;
     /* Ensures the button stretches as needed */
@@ -2027,7 +2037,6 @@ textarea.form-input::-webkit-resizer {
   }
 
   .download-btn {
-    margin: 20px 0;
     /* Removes auto centering */
     width: auto;
     /* Ensures the button stretches as needed */
@@ -2430,7 +2439,6 @@ textarea.form-input::-webkit-resizer {
     /* Center-align content vertically */
     overflow: hidden;
     /* Ensures the arrow stays within the button bounds */
-    margin: 20px auto;
     /* Centers horizontally and reduces gap above */
     width: max-content;
     /* Adjusts to content width */
