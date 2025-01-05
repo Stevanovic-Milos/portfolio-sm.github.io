@@ -152,7 +152,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-/*const textLines = [
+const textLines = [
   "Success is not just about doing things; it's about doing them right.",
   " Hi there! I'm Milos, a diligent student with a passion for learning and a commitment to excellence. Welcome to my online portfolio, where you'll find a showcase of my journey and capabilities. Let's connect and explore how I can contribute to your team's success."
 ];
@@ -180,8 +180,19 @@ function animateText(index) {
   }, 20);
 }
 
-animateText(0);
-*/
+// Check if the screen size is smaller than 768px (adjust as needed)
+if (window.innerWidth > 768) {
+  // Only run typing animation for larger screens
+  animateText(0);
+} else {
+  // For small screens, immediately display the full text without animation
+  lineElements.forEach((lineElement, index) => {
+    lineElement.textContent = textLines[index];
+    lineElement.style.opacity = "1"; // Ensure text is visible
+  });
+}
+
+
 function downloadPortfolio() {
   const link = document.createElement('a');
   link.href = 'portfolioMS.pdf'; // Path to the portfolio file

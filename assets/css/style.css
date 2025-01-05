@@ -306,12 +306,10 @@ article.active {
 @keyframes slideInn {
   0% {
     transform: translateY(100%);
-    opacity: 0;
   }
  
   100% {
     transform: translateY(0%);
-    opacity: 1;
   }
 }
 
@@ -419,11 +417,15 @@ main {
   overflow: hidden;
   transition: var(--transition-2);
   gap: 15px;
+  animation: slideInn 1s ease;
+
+  
 }
 
 
 .sidebar.active {
   max-height: 1000px;
+  
 }
 
 /* Sidebar Info Styling */
@@ -1612,6 +1614,12 @@ textarea.form-input::-webkit-resizer {
   .sidebar {
     max-height: 200px;
     margin-bottom: 30px;
+    animation: none;
+
+  }
+  .about-text p {
+    transition: none; /* Disable typing animation */
+    opacity: 1; /* Ensure text is visible immediately */
   }
 
   .service-container-cer {
@@ -2298,6 +2306,10 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 0;
     padding-top: 60px;
     z-index: 1;
+    animation: slideInn 0.7s ease;
+    
+      
+    
   }
 
   .sidebar-info {
