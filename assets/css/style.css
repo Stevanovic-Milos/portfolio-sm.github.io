@@ -301,18 +301,21 @@ article {
 
 article.active {
   display: block;
-  animation: fade 0.5s ease backwards;
+  animation: slideInn 1s ease backwards;
 }
 
-@keyframes fade {
+@keyframes slideInn {
   0% {
+    transform: translateY(100%);
     opacity: 0;
   }
-
+ 
   100% {
+    transform: translateY(0%);
     opacity: 1;
   }
 }
+
 
 .h2,
 .h3,

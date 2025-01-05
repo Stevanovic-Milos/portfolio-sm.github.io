@@ -306,6 +306,7 @@ window.addEventListener('load', function() {
         out_mode: "out"
       }
     },
+
     retina_detect: true
   });
   
