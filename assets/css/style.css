@@ -747,7 +747,7 @@ main {
   /* Hidden initially */
   transform: translateY(100px);
   opacity: 0;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 }
 
 .service-item.visible {

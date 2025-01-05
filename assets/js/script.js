@@ -181,7 +181,7 @@ function animateText(index) {
 }
 
 // Check if the screen size is smaller than 768px (adjust as needed)
-if (window.innerWidth > 768) {
+if (window.innerWidth > 1250) {
   // Only run typing animation for larger screens
   animateText(0);
 } else {
