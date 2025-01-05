@@ -301,7 +301,7 @@ article {
 
 article.active {
   display: block;
-  animation: slideInn 1s ease backwards;
+  animation: slideInn 0.8s ease ;
 }
 
 @keyframes slideInn {
