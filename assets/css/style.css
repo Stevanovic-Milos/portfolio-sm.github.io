@@ -485,13 +485,15 @@ main {
 /* Keyframes for a fast spin with zoom effect */
 @keyframes fast-spin-zoom {
   0% {
-    transform: rotate(0deg);
-    opacity: 1;
+    scale: 0;
+  }
+  50% {
+   scale: 0.1;
   }
   100% {
-    transform: rotate(720deg);
-    opacity: 1;
-  }
+    scale: 0;
+   }
+ 
 }
 
 
