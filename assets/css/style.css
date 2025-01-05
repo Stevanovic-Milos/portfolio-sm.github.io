@@ -482,24 +482,29 @@ main {
   /* Smooth transition for opacity */
 }
 
-/* Keyframes for a fast spin with zoom effect */
-@keyframes fast-spin-zoom {
+/* Keyframes for cool rotation animation */
+/* Keyframes for smooth rotation */
+@keyframes smooth-rotate {
   0% {
-    transform: rotate(0deg);
-    opacity: 1;
+    transform: rotate(0deg); /* Start with no rotation */
+  }
+  50% {
+    transform: rotate(180deg) scale(0.8) ; /* Halfway, rotate 180 degrees and slightly grow */
   }
   100% {
-    transform: rotate(720deg);
-    opacity: 1;
+    transform: rotate(360deg);
+    opacity: 0.8;
   }
 }
 
-
-
+/* Apply smooth rotation animation */
 .avatar-box img.animate {
-  animation: fast-spin-zoom 0.6s ease; /* Spin with blur, 0.8s duration */
-  /* Fast rotation with blur effect */
+  animation: smooth-rotate 0.5s linear ; /* Smooth rotation, infinite loop */
+  transform-origin: center; /* Rotate around the center */
+  animation-delay: 0.01s; 
 }
+
+
 
 
 .info-content .name {
