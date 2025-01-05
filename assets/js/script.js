@@ -326,11 +326,12 @@ const button = document.querySelector('.info_more-btn');
 button.addEventListener('click', () => {
   button.classList.toggle('opened');
 });
+
 const avatar = document.getElementById('avatar');
-let isFlipped = false;
+let currentIndex = 0; // Track the current image index
 
 // Define the image paths
-const images = ['./assets/images/me.jpg', './assets/images/ME2.webp'];
+const images = ['./assets/images/me.jpg', './assets/images/ME2.webp', './assets/images/me3.jpg'];
 
 avatar.addEventListener('click', () => {
   // Add animation class to trigger the spin
@@ -338,8 +339,9 @@ avatar.addEventListener('click', () => {
 
   // Wait for the animation duration to swap the image
   setTimeout(() => {
-    avatar.src = isFlipped ? images[0] : images[1];
-    isFlipped = !isFlipped;
+    // Cycle through the images array
+    currentIndex = (currentIndex + 1) % images.length; // This ensures it loops back to the first image
+    avatar.src = images[currentIndex];
   }, 400); // Wait until halfway through the 0.8s animation
 
   // Remove the animation class after the animation ends
@@ -351,3 +353,4 @@ avatar.addEventListener('click', () => {
     { once: true } // Ensures the event listener is removed after firing
   );
 });
+
