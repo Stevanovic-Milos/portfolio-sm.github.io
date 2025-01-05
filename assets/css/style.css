@@ -307,7 +307,7 @@ article.active {
     transform: translateY(0); /* Start at the original position */
   }
   50% {
-    transform: translateY(100%); /* Slide completely down */
+    transform: translateY(300px); /* Slide completely down */
   }
   100% {
     transform: translateY(0); /* Slide back up to the original position */
