@@ -1607,7 +1607,7 @@ textarea.form-input::-webkit-resizer {
   }
   article.active {
     display: block;
-    animation: slideInn 0.6s ease ;
+    animation: slideInn 0.7s ease ;
   }
   .sidebar {
     max-height: 200px;
