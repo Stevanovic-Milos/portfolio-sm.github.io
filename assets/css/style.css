@@ -305,7 +305,7 @@ article.active {
 
 @keyframes slideInn {
   0% {
-    transform: translateY(100%);
+    transform: translateY(300%);
   }
  
   100% {
@@ -1614,7 +1614,7 @@ textarea.form-input::-webkit-resizer {
   .sidebar {
     max-height: 200px;
     margin-bottom: 30px;
-    animation: none;
+    animation: slideInn 0.7s ease;
 
   }
   .about-text p {
