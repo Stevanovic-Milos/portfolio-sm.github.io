@@ -326,3 +326,28 @@ const button = document.querySelector('.info_more-btn');
 button.addEventListener('click', () => {
   button.classList.toggle('opened');
 });
+const avatar = document.getElementById('avatar');
+let isFlipped = false;
+
+// Define the image paths
+const images = ['./assets/images/me.jpg', './assets/images/ME2.webp'];
+
+avatar.addEventListener('click', () => {
+  // Add animation class to trigger the spin
+  avatar.classList.add('animate');
+
+  // Wait for the animation duration to swap the image
+  setTimeout(() => {
+    avatar.src = isFlipped ? images[0] : images[1];
+    isFlipped = !isFlipped;
+  }, 400); // Wait until halfway through the 0.8s animation
+
+  // Remove the animation class after the animation ends
+  avatar.addEventListener(
+    'animationend',
+    () => {
+      avatar.classList.remove('animate');
+    },
+    { once: true } // Ensures the event listener is removed after firing
+  );
+});

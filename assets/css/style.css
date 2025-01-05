@@ -465,6 +465,12 @@ main {
 
 
 /* Avatar Image Styling */
+.avatar-box {
+  display: inline-block;
+  perspective: 1000px;
+  /* Ensures the 3D effect is visible */
+}
+
 .avatar-box img {
   width: 190px;
   height: 190px;
@@ -472,39 +478,26 @@ main {
   object-fit: cover;
   display: block;
   border: solid 10px var(--onyx);
-  transition: border-color 0.3s ease, transform 0.3s ease;
-  /* Smooth transition for border and scale */
-
+  transition: border-color 0.3s ease, opacity 0.3s ease;
+  /* Smooth transition for opacity */
 }
 
-/* Keyframes for the coin flip animation */
-@keyframes coin-flip {
+/* Keyframes for a fast spin around itself with blur effect */
+@keyframes fast-spin-blur {
   0% {
-    transform: rotateY(0);
-    /* Start at 0 degrees */
+    transform: rotate(0deg);
+    opacity: 1;
   }
-
-  50% {
-    transform: rotateY(180deg);
-    /* Halfway point - flipped */
-  }
-
   100% {
-    transform: rotateY(360deg);
-    /* Full rotation */
+    transform: rotate(1080deg); /* Complete the full 2 rotations */
+    opacity: 1; /* Restore full opacity */
   }
-}
-
-
-.avatar-box:hover img {
-  border-color: var(--onyx);
-  /* Optional: Change border color on hover */
 }
 
 .avatar-box img.animate {
-  animation: coin-flip 1.5s ease-out;
+  animation: fast-spin-blur 0.8s ease-out; /* Spin with blur, 0.8s duration */
+  /* Fast rotation with blur effect */
 }
-
 
 
 .info-content .name {
@@ -566,10 +559,6 @@ main {
   color: #f1c40f; /* New color when opened */
 }
 
-.info_more-btn:hover {
-  background: var(--bg-gradient-dark); /* Darker background when hovered */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on hover */
-}
 
 .info_more-btn.opened:hover {
   background: var(--bg-gradient-light); /* Different background when opened and hovered */
@@ -1637,7 +1626,7 @@ textarea.form-input::-webkit-resizer {
  * responsive larger than 450px screen
  */
 
-@media (min-width: 250px) {
+ @media (min-width: 250px) {
   /**
    * client
    */
@@ -1678,11 +1667,8 @@ textarea.form-input::-webkit-resizer {
   }
 
   .download-btn {
-    /* Removes auto centering */
     width: auto;
-    /* Ensures the button stretches as needed */
     justify-content: flex-start;
-    /* Aligns content to the left */
   }
 
   .service-container-cer>* {
@@ -1810,26 +1796,66 @@ textarea.form-input::-webkit-resizer {
   }
 
   .info_more-btn {
+    position: absolute;
     top: -30px;
     right: -30px;
     padding: 10px 15px;
     background: var(--bg-gradient-jet);
-
+    color: white;
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
   }
-
+  
   .info_more-btn span {
     display: block;
     font-size: var(--fs-8);
+    transition: color 0.3s ease; /* Smooth transition for text color */
+    color: yellow;
   }
-
+  
   .info_more-btn ion-icon {
-    display: none;
+    display: none; /* Keep the icon hidden */
   }
   
   .info_more-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
     background: var(--bg-gradient-jet);
-
+    border-radius: inherit;
+    transition: transform 0.3s ease, background 0.3s ease; /* Animation for the pseudo-element */
   }
+  
+  /* Hover Animation */
+  .info_more-btn:hover {
+    background: var(--bg-gradient-dark); /* Change background on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Intensify shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+  }
+  
+  .info_more-btn:hover span {
+    color: var(--primary-color); /* Change text color on hover */
+  }
+  
+  .info_more-btn:hover::before {
+    transform: scale(1.1); /* Slightly grow the pseudo-element on hover */
+    background: var(--bg-gradient-light); /* Lighten the background gradient */
+  }
+  
+  /* Click Animation */
+  .info_more-btn:active {
+    transform: scale(0.95); /* Slightly shrink button on click for a pressed effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Slightly reduce shadow on click */
+  }
+  
+  .info_more-btn:active::before {
+    transform: scale(1.2); /* Expand the pseudo-element on click */
+    background: var(--primary-color); /* Use a primary color for the click effect */
+  }
+  
   .separator {
     margin: 32px 0;
   }
@@ -2052,11 +2078,8 @@ textarea.form-input::-webkit-resizer {
   }
 
   .download-btn {
-    /* Removes auto centering */
     width: auto;
-    /* Ensures the button stretches as needed */
     justify-content: flex-start;
-    /* Aligns content to the left */
   }
 
   /**
@@ -2429,34 +2452,10 @@ textarea.form-input::-webkit-resizer {
   }
 
   .download-btn {
-    position: relative;
-    background: var(--eerie-black-2);
-    /* Matching background */
-    color: yellow;
-    /* Yellow text */
-    padding: 8px 12px;
-    /* Reduced padding for a smaller button */
-    border: 1px solid var(--jet);
-    /* Border color */
-    border-radius: 8px;
-    /* Reduced border radius for less rounded corners */
-    font-size: var(--fs-7);
-    /* Smaller font size */
-    font-weight: var(--fw-300);
-    /* Same font weight */
-    cursor: pointer;
-    /* Pointer cursor */
-    transition: all 0.3s ease;
-    /* Smooth transition */
-    display: flex;
     justify-content: center;
     align-items: center;
-    /* Center-align content vertically */
-    overflow: hidden;
-    /* Ensures the arrow stays within the button bounds */
-    /* Centers horizontally and reduces gap above */
-    width: max-content;
-    /* Adjusts to content width */
+    margin: 10px auto;
+
   }
 
 
