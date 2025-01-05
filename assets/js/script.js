@@ -289,18 +289,32 @@ window.addEventListener('load', function() {
   particlesJS("particles-js", {
     particles: {
       number: {
-        value: 100
+        value: 100, // Reduce particle count for mobile
+        density: {
+          enable: true,
+          value_area: 800
+        }
       },
       size: {
-        value: 1
+        value: 3, // Adjust particle size
+        random: true
       },
       move: {
         enable: true,
-        speed: 1
-      },
-      shape: {
-        type: "circle"
+        speed: 1,
+        direction: "none",
+        out_mode: "out"
       }
-    }
+    },
+    interactivity: {
+      events: {
+        onhover: {
+          enable: true,
+          mode: "repulse"
+        }
+      }
+    },
+    retina_detect: true
   });
+  
 });
