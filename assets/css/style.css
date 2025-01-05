@@ -304,13 +304,18 @@ article.active {
 }
 @keyframes slideInn {
   0% {
-    transform: translateY(0); /* Start at the original position */
-  }
-  50% {
-    transform: translateY(300px); /* Slide completely down */
+    transform: translateY(50vh); /* Start at the original position */
   }
   100% {
     transform: translateY(0); /* Slide back up to the original position */
+  }
+}
+@keyframes slideInnn {
+  0% {
+    transform: translateY(0vh); /* Start at the original position */
+  }
+  100% {
+    transform: translateY(50vh); /* Slide back up to the original position */
   }
 }
 @keyframes slideside {
@@ -324,10 +329,7 @@ article.active {
 }
 @keyframes slideOnn {
   0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-150%);
+    transform: translateY(-50vh);
   }
   100% {
     transform: translateY(0);
@@ -1630,14 +1632,17 @@ textarea.form-input::-webkit-resizer {
   .Languges-item-item {
     min-width: calc(33.33% - 10px);
   }
+  
   article.active {
     display: block;
-    animation: slideInn 0.8s ease ;
+    animation: slideInn 0.5s ease;
   }
+  
+  
   .sidebar {
     max-height: 200px;
     margin-bottom: 30px;
-    animation: slideOnn 0.8s ease;
+    animation: slideOnn 0.5s ease;
 
   }
   .about-text p {
