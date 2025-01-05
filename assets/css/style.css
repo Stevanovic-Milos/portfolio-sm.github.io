@@ -301,7 +301,6 @@ article {
 
 article.active {
   display: block;
-  animation: slideInn 0.5s ease ;
 }
 
 @keyframes slideInn {
@@ -1606,7 +1605,10 @@ textarea.form-input::-webkit-resizer {
   .Languges-item-item {
     min-width: calc(33.33% - 10px);
   }
-
+  article.active {
+    display: block;
+    animation: slideInn 0.8s ease ;
+  }
   .sidebar {
     max-height: 200px;
     margin-bottom: 30px;
@@ -1968,7 +1970,10 @@ textarea.form-input::-webkit-resizer {
   article {
     width: 700px;
   }
-
+  article.active {
+    display: block;
+    animation: none;
+  }
   .has-scrollbar::-webkit-scrollbar-button {
     width: 100px;
   }
@@ -2225,7 +2230,10 @@ textarea.form-input::-webkit-resizer {
   body::-webkit-scrollbar {
     width: 20px;
   }
-
+  article.active {
+    display: block;
+    animation: none;
+  }
   body::-webkit-scrollbar-track {
     background: var(--smoky-black);
   }
