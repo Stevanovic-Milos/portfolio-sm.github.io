@@ -1,11 +1,15 @@
 'use strict';
 
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+const elementToggleFunc = function(elem) {
+  elem.classList.toggle("active");
+}
 
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+sidebarBtn.addEventListener("click", function() {
+  elementToggleFunc(sidebar);
+});
 
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
@@ -16,14 +20,14 @@ const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
-const testimonialsModalFunc = function () {
+const testimonialsModalFunc = function() {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
 
 for (let i = 0; i < testimonialsItem.length; i++) {
 
-  testimonialsItem[i].addEventListener("click", function () {
+  testimonialsItem[i].addEventListener("click", function() {
 
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
@@ -44,10 +48,12 @@ const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function () { elementToggleFunc(this); });
+select.addEventListener("click", function() {
+  elementToggleFunc(this);
+});
 
 for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
+  selectItems[i].addEventListener("click", function() {
 
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
@@ -59,7 +65,7 @@ for (let i = 0; i < selectItems.length; i++) {
 
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
+const filterFunc = function(selectedValue) {
 
   for (let i = 0; i < filterItems.length; i++) {
 
@@ -79,7 +85,7 @@ let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
 
-  filterBtn[i].addEventListener("click", function () {
+  filterBtn[i].addEventListener("click", function() {
 
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
@@ -130,7 +136,7 @@ const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
 for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+  navigationLinks[i].addEventListener("click", function() {
 
     for (let i = 0; i < pages.length; i++) {
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
@@ -169,17 +175,18 @@ function animateText(index) {
       setTimeout(() => {
         lineElement.style.opacity = "1";
         animateText(index + 1);
-      }, 50); 
+      }, 50);
     }
-  }, 20); 
+  }, 20);
 }
 
 animateText(0);
+
 function downloadPortfolio() {
   const link = document.createElement('a');
-  link.href = 'portfolioMS.pdf';  // Path to the portfolio file
-  link.download = 'portfolioMS.pdf';      // The name the file will have when downloaded
-  link.click();                           // Simulates a click to trigger the download
+  link.href = 'portfolioMS.pdf'; // Path to the portfolio file
+  link.download = 'portfolioMS.pdf'; // The name the file will have when downloaded
+  link.click(); // Simulates a click to trigger the download
 }
 document.addEventListener("DOMContentLoaded", () => {
   const serviceItems = document.querySelectorAll(".service-item");
@@ -192,8 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
           observer.unobserve(entry.target); // Stop observing once it's visible
         }
       });
-    },
-    {
+    }, {
       threshold: 0.2, // Trigger when 20% of the element is visible
     }
   );
@@ -214,7 +220,9 @@ avatarBox.addEventListener('click', () => {
   // Remove the class after the animation ends to allow re-triggering
   avatarBox.addEventListener('animationend', () => {
     avatarBox.classList.remove('animate');
-  }, { once: true });
+  }, {
+    once: true
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -227,8 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
           entry.target.classList.add("visible");
         }
       });
-    },
-    {
+    }, {
       threshold: 0.5, // Adjust threshold as needed
     }
   );
@@ -247,8 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
           entry.target.classList.add("visible");
         }
       });
-    },
-    {
+    }, {
       threshold: 0.5, // Adjust to control when the animation starts (50% visibility)
     }
   );
@@ -270,8 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }, index * 150); // Stagger delay between items
         }
       });
-    },
-    {
+    }, {
       threshold: 0.1, // Adjust to control when the animation starts
     }
   );
@@ -280,22 +285,22 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(item);
   });
 });
-  window.addEventListener('load', function() {
-    particlesJS("particles-js", {
-      particles: {
-        number: {
-          value: 100
-        },
-        size: {
-          value: 1
-        },
-        move: {
-          enable: true,
-          speed: 1
-        },
-        shape: {
-          type: "circle"
-        }
+window.addEventListener('load', function() {
+  particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: 100
+      },
+      size: {
+        value: 1
+      },
+      move: {
+        enable: true,
+        speed: 1
+      },
+      shape: {
+        type: "circle"
       }
-    });
+    }
   });
+});
