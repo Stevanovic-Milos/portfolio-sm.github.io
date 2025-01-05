@@ -305,7 +305,16 @@ article.active {
 
 @keyframes slideInn {
   0% {
-    transform: translateY(300%);
+    transform: translateY(100%);
+  }
+ 
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideOnn {
+  0% {
+    transform: translateY(-100%);
   }
  
   100% {
@@ -1156,7 +1165,7 @@ main {
 
 /* Add visible class to trigger animation */
 .service-item-cer.visible {
-  animation: slideInFromLeft 0.7s ease forwards;
+  animation: slideInFromLeft 0.5s ease forwards;
 }
 
 /* Optional: Adding staggered delay for the animation */
@@ -1600,12 +1609,12 @@ textarea.form-input::-webkit-resizer {
   }
   article.active {
     display: block;
-    animation: slideInn 1s ease ;
+    animation: slideInn 0.5s ease ;
   }
   .sidebar {
     max-height: 200px;
     margin-bottom: 30px;
-    animation: slideInn 1s ease;
+    animation: slideOnn 0.5s ease;
 
   }
   .about-text p {
@@ -2297,7 +2306,7 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 0;
     padding-top: 60px;
     z-index: 1;
-    animation: slideInn 0.7s ease;
+    animation: slideInn 0.5s ease;
     
       
     
