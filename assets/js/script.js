@@ -1,8 +1,9 @@
 'use strict';
 
+// Ensure that the function is declared only once
 const elementToggleFunc = function(elem) {
   elem.classList.toggle("active");
-}
+};
 
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
@@ -23,23 +24,21 @@ const modalText = document.querySelector("[data-modal-text]");
 const testimonialsModalFunc = function() {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
-}
+};
 
+// Loop to handle testimonial item clicks
 for (let i = 0; i < testimonialsItem.length; i++) {
-
   testimonialsItem[i].addEventListener("click", function() {
-
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
+    
     testimonialsModalFunc();
-
   });
-
 }
 
+// Event listener to close modal
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
@@ -48,18 +47,18 @@ const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
+// Toggle the dropdown
 select.addEventListener("click", function() {
   elementToggleFunc(this);
 });
 
+// Loop through select items to change the selected value
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function() {
-
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
-
   });
 }
 
