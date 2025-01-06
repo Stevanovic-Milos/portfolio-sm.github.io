@@ -2331,7 +2331,8 @@ textarea.form-input::-webkit-resizer {
   }
   article.active {
     display: block;
-    animation: none; /* Apply fade-in animation */
+    animation: none
+    ; /* Apply fade-in animation */
   }
   
   @keyframes fadeIn {
