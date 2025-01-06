@@ -469,6 +469,8 @@ main {
   display: inline-block;
   perspective: 1000px;
   /* Ensures the 3D effect is visible */
+
+
 }
 
 .avatar-box img {
@@ -478,6 +480,8 @@ main {
   object-fit: cover;
   display: block;
   border: solid 1px var(--jet);
+  box-shadow: var(--shadow-1);
+
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
@@ -2327,8 +2331,18 @@ textarea.form-input::-webkit-resizer {
   }
   article.active {
     display: block;
-    animation: none;
+    animation: none; /* Apply fade-in animation */
   }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Start fully transparent */
+    }
+    to {
+      opacity: 1; /* End fully visible */
+    }
+  }
+  
   body::-webkit-scrollbar-track {
     background: var(--smoky-black);
   }
