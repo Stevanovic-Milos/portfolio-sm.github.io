@@ -41,6 +41,7 @@
   /* New Solid Colors */
   --jet: hsl(210, 20%, 15%);
   /* Cool, dark slate gray */
+  
   --onyx: hsl(160, 20%, 10%);
   /* Dark teal with subtle tones */
   --eerie-black-1: hsl(200, 15%, 7%);
@@ -63,46 +64,6 @@
   /* Semi-transparent light gray */
   --bittersweet-shimmer: hsl(10, 70%, 60%);
   /* Warm reddish amber with a golden tone */
-
-
-  /* Light Mode Gradients */
-  --bg-gradient-light-onyx: linear-gradient(to bottom right,
-      hsl(170, 40%, 55%) 5%,
-      /* Muted teal with a bit more warmth */
-      hsl(190, 30%, 70%) 95%
-      /* Softer teal */
-    );
-
-  --bg-gradient-light-jet: linear-gradient(to bottom right,
-      hsla(150, 5%, 80%, 0.4) 0%,
-      /* Light, soft charcoal */
-      hsla(180, 10%, 90%, 0) 100%),
-    hsl(160, 15%, 60%);
-  /* Smoky teal with a more natural light tone */
-
-  --bg-gradient-light-yellow-1: linear-gradient(to bottom right,
-      hsl(60, 100%, 75%) 0%,
-      /* Soft lemon yellow */
-      hsla(50, 100%, 70%, 0) 50%);
-
-  --bg-gradient-light-yellow-2: linear-gradient(135deg,
-      hsla(60, 100%, 75%, 0.3) 0%,
-      /* Softer golden yellow */
-      hsla(55, 100%, 65%, 0) 60%),
-    hsl(40, 30%, 55%);
-  /* Warm golden tint for depth */
-
-  --border-gradient-light-onyx: linear-gradient(to bottom right,
-      hsl(190, 30%, 65%) 0%,
-      /* Muted, medium-light teal border */
-      hsla(180, 20%, 85%, 0) 50%);
-
-  --text-gradient-light-yellow: linear-gradient(to right,
-      hsl(60, 100%, 60%),
-      /* Warm lemon yellow */
-      hsl(50, 90%, 50%)
-      /* Soft golden yellow */
-    );
 
 
   /**
