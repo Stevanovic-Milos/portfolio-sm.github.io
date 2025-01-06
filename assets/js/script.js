@@ -1,33 +1,5 @@
 'use strict';
 
-// Ensure 'avatar' is only declared once
-const avatar = document.getElementById('avatar');
-let currentIndex = 0; // Track the current image index
-
-// Define the image paths
-const images = ['./assets/images/me.jpg', './assets/images/ME2.webp', './assets/images/me3.jpg'];
-
-avatar.addEventListener('click', () => {
-  // Add animation class to trigger the spin
-  avatar.classList.add('animate');
-
-  // Wait for the animation duration to swap the image
-  setTimeout(() => {
-    // Cycle through the images array
-    currentIndex = (currentIndex + 1) % images.length; // This ensures it loops back to the first image
-    avatar.src = images[currentIndex];
-  }, 10); // Wait until halfway through the 0.8s animation
-
-  // Remove the animation class after the animation ends
-  avatar.addEventListener(
-    'animationend',
-    () => {
-      avatar.classList.remove('animate');
-    },
-    { once: true } // Ensures the event listener is removed after firing
-  );
-});
-
 const elementToggleFunc = function(elem) {
   elem.classList.toggle("active");
 }
@@ -340,3 +312,31 @@ button.addEventListener('click', () => {
   button.classList.toggle('opened');
 });
 
+/*image rotation*/
+// Ensure 'avatar' is only declared once
+const avatar = document.getElementById('avatar');
+let currentIndex = 0; // Track the current image index
+
+// Define the image paths
+const images = ['./assets/images/me.jpg', './assets/images/ME2.webp', './assets/images/me3.jpg'];
+
+avatar.addEventListener('click', () => {
+  // Add animation class to trigger the spin
+  avatar.classList.add('animate');
+
+  // Wait for the animation duration to swap the image
+  setTimeout(() => {
+    // Cycle through the images array
+    currentIndex = (currentIndex + 1) % images.length; // This ensures it loops back to the first image
+    avatar.src = images[currentIndex];
+  }, 10); // Wait until halfway through the 0.8s animation
+
+  // Remove the animation class after the animation ends
+  avatar.addEventListener(
+    'animationend',
+    () => {
+      avatar.classList.remove('animate');
+    },
+    { once: true } // Ensures the event listener is removed after firing
+  );
+});
