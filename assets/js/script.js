@@ -317,7 +317,7 @@ const avatar = document.getElementById('avatar');
 let currentIndex = 0; // Track the current image index
 
 // Define the image paths
-const images = ['./assets/images/me.jpg', './assets/images/ME2.webp', './assets/images/me3.jpg'];
+const images = ['./assets/images/ME2.webp','./assets/images/me.jpg'];
 
 avatar.addEventListener('click', () => {
   // Add animation class to trigger the spin
