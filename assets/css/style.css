@@ -772,6 +772,8 @@ main {
 }
 
 .service-icon-box img {
+  width: 40px;
+  height: auto;
   margin: auto;
 }
 
