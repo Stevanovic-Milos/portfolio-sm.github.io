@@ -1600,44 +1600,39 @@ textarea.form-input::-webkit-resizer {
  * responsive larger than 450px screen
  */
 
- @media (min-width: 250px) {
-  /**
-   * client
-   */
+ /* Base Styles for Smaller Screens */
+@media (min-width: 250px) {
+  /** Client Styles */
 
-  .Languges-item-item {
+  .Languages-item-item {
     min-width: calc(33.33% - 10px);
   }
-  
+
   article.active {
     display: block;
     animation: slideInn 0.5s ease;
   }
-  .info_more-btn {
-    background: var(--eerie-black-2);
 
-  }
-  
+  .info_more-btn,
   .info_more-btn::before {
     background: var(--eerie-black-2);
-
   }
-  
-  
+
   .sidebar {
     max-height: 200px;
     margin-bottom: 15px;
     animation: slideOnn 0.5s ease;
-
   }
+
   .about-text p {
-    transition: none; /* Disable typing animation */
-    opacity: 1; /* Ensure text is visible immediately */
+    transition: none;
+    opacity: 1;
   }
 
   .service-container-cer {
     display: flex;
-    /* Ensure items are flex items */
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .download-btn {
@@ -1645,13 +1640,10 @@ textarea.form-input::-webkit-resizer {
     justify-content: flex-start;
   }
 
-  .service-container-cer>* {
+  .service-container-cer > * {
     width: 100%;
-    /* Ensure each item takes the full width of the container */
     box-sizing: border-box;
-    /* Prevent padding/borders from affecting layout */
   }
-
 
   .sidebar.active {
     max-height: 584px;
@@ -1660,11 +1652,8 @@ textarea.form-input::-webkit-resizer {
   .avatar-box img {
     width: 150px;
     height: 150px;
+    border-radius: 50%;
   }
-
-  /**
-   * #PORTFOLIO, BLOG 
-   */
 
   .project-img,
   .blog-banner-box {
@@ -1674,23 +1663,12 @@ textarea.form-input::-webkit-resizer {
   .filter-list {
     display: none;
   }
-
 }
 
-/**
- * responsive larger than 580px screen
- */
-
+/* Responsive Styles for Screens Larger than 580px */
 @media (min-width: 580px) {
-  /**
-   * CUSTOM PROPERTY
-   */
-
   :root {
-    /**
-     * typography
-     */
-
+    /** Typography Variables */
     --fs-1: 32px;
     --fs-2: 24px;
     --fs-3: 26px;
@@ -1700,17 +1678,13 @@ textarea.form-input::-webkit-resizer {
     --fs-8: 12px;
   }
 
-  /**
-   * #REUSED STYLE
-   */
-
+  /** Sidebar & Article */
   .sidebar,
   article {
     width: 520px;
     margin-inline: auto;
     padding: 30px;
   }
-
 
   .article-title {
     font-weight: var(--fw-600);
@@ -1720,6 +1694,10 @@ textarea.form-input::-webkit-resizer {
   .article-title::after {
     width: 40px;
     height: 5px;
+    content: '';
+    display: block;
+    background: var(--primary-color);
+    margin-top: 8px;
   }
 
   .icon-box {
@@ -1734,18 +1712,9 @@ textarea.form-input::-webkit-resizer {
     height: 170px;
   }
 
-  /**
-   * #MAIN
-   */
-
   main {
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin: 60px auto 100px;
   }
-
-  /**
-   * #SIDEBAR
-   */
 
   .sidebar {
     max-height: 300px;
@@ -1760,7 +1729,6 @@ textarea.form-input::-webkit-resizer {
     gap: 25px;
   }
 
-
   .info-content .name {
     margin-bottom: 15px;
   }
@@ -1769,6 +1737,7 @@ textarea.form-input::-webkit-resizer {
     padding: 5px 18px;
   }
 
+  /** Info Button */
   .info_more-btn {
     position: absolute;
     top: -30px;
@@ -1776,77 +1745,39 @@ textarea.form-input::-webkit-resizer {
     padding: 10px 15px;
     background: var(--bg-gradient-jet);
     color: white;
-    border-radius: 8px; /* Slightly rounded corners for a modern look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     cursor: pointer;
   }
-  
+
   .info_more-btn span {
     display: block;
     font-size: var(--fs-8);
-    transition: color 0.3s ease; /* Smooth transition for text color */
     color: yellow;
+    transition: color 0.3s ease;
   }
-  
-  .info_more-btn ion-icon {
-    display: none; /* Keep the icon hidden */
-  }
-  
-  .info_more-btn::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: var(--bg-gradient-jet);
-    border-radius: inherit;
-    transition: transform 0.3s ease, background 0.3s ease; /* Animation for the pseudo-element */
-  }
-  
-  /* Hover Animation */
+
   .info_more-btn:hover {
-    background: var(--bg-gradient-dark); /* Change background on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Intensify shadow on hover */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
+    background: var(--bg-gradient-dark);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
   }
-  
+
   .info_more-btn:hover span {
-    color: var(--primary-color); /* Change text color on hover */
+    color: var(--primary-color);
   }
-  
-  .info_more-btn:hover::before {
-    transform: scale(1.1); /* Slightly grow the pseudo-element on hover */
-    background: var(--bg-gradient-light); /* Lighten the background gradient */
-  }
-  
-  /* Click Animation */
+
   .info_more-btn:active {
-    transform: scale(0.95); /* Slightly shrink button on click for a pressed effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Slightly reduce shadow on click */
+    transform: scale(0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   }
-  
-  .info_more-btn:active::before {
-    transform: scale(1.2); /* Expand the pseudo-element on click */
-    background: var(--primary-color); /* Use a primary color for the click effect */
-  }
-  
+
   .separator {
     margin: 32px 0;
   }
 
-  .contacts-list {
-    gap: 20px;
-  }
-
-  .contact-info {
-    max-width: calc(100% - 64px);
-    width: calc(100% - 64px);
-  }
-
-  /**
-   * #NAVBAR
-   */
-
+  /** Navbar */
   .navbar {
     border-radius: 20px 20px 0 0;
   }
@@ -1856,13 +1787,10 @@ textarea.form-input::-webkit-resizer {
   }
 
   .navbar-link {
-    --fs-8: 14px;
+    font-size: var(--fs-8);
   }
 
-  /**
-   * #ABOUT
-   */
-
+  /** About Section */
   .about .article-title {
     margin-bottom: 20px;
   }
@@ -1871,18 +1799,15 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 40px;
   }
 
-  /* service */
-
+  /** Service Section */
   .service-item {
     display: flex;
-    justify-content: flex-start;
     align-items: flex-start;
     gap: 18px;
     padding: 30px;
   }
 
   .service-icon-box {
-    margin-bottom: 0;
     margin-top: 5px;
   }
 
@@ -1890,8 +1815,7 @@ textarea.form-input::-webkit-resizer {
     text-align: left;
   }
 
-  /* testimonials */
-
+  /** Testimonials */
   .testimonials-title {
     margin-bottom: 25px;
   }
@@ -1899,13 +1823,11 @@ textarea.form-input::-webkit-resizer {
   .testimonials-list {
     gap: 30px;
     margin: 0 -30px;
-    padding: 30px;
-    padding-bottom: 35px;
+    padding: 30px 30px 35px;
   }
 
   .content-card {
-    padding: 30px;
-    padding-top: 25px;
+    padding: 30px 30px 25px;
   }
 
   .testimonials-avatar-box {
@@ -1923,50 +1845,31 @@ textarea.form-input::-webkit-resizer {
   }
 
   .testimonials-text {
-    line-clamp: 2;
+    display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
-  /* testimonials modal */
-
+  /** Testimonials Modal */
   .modal-container {
     padding: 20px;
   }
 
   .testimonials-modal {
     display: flex;
-    justify-content: flex-start;
     align-items: stretch;
     gap: 25px;
     padding: 30px;
     border-radius: 20px;
   }
 
-  .modal-img-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .modal-avatar-box {
-    border-radius: 18px;
-    margin-bottom: 0;
-  }
-
   .modal-avatar-box img {
     width: 65px;
   }
 
-  .modal-img-wrapper>img {
-    display: block;
-    flex-grow: 1;
-    width: 35px;
-  }
-
-  /**
-   * #RESUME
-   */
-
+  /** Resume Section */
   .timeline-list {
     margin-left: 65px;
   }
@@ -1985,31 +1888,18 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 25px;
   }
 
-  /*certificate responsive*/
-  /* Common styles for service container */
-  .service-container-cer {
-    padding-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  /* Style for each service item */
+  /** Certificate Section */
   .service-item-cer {
     width: calc(50% - 20px);
-    /* Adjust as needed */
     margin-bottom: 20px;
-    /* Adjust spacing between rows */
     overflow: hidden;
     position: relative;
     border-radius: 14px;
   }
 
-  /* Style for service icons */
   .service-icon-box-cer {
-    position: relative;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 14px;
     overflow: hidden;
   }
 
@@ -2017,13 +1907,8 @@ textarea.form-input::-webkit-resizer {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 14px;
   }
 }
-
-/**
- * responsive larger than 768px screen
- */
 
 @media (min-width: 768px) {
   /**
