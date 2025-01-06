@@ -1,4 +1,6 @@
 'use strict';
+
+// Ensure 'avatar' is only declared once
 const avatar = document.getElementById('avatar');
 let currentIndex = 0; // Track the current image index
 
@@ -25,7 +27,6 @@ avatar.addEventListener('click', () => {
     { once: true } // Ensures the event listener is removed after firing
   );
 });
-
 
 const elementToggleFunc = function(elem) {
   elem.classList.toggle("active");
