@@ -179,17 +179,9 @@ function animateText(index) {
   }, 20);
 }
 
-// Check if the screen size is smaller than 768px (adjust as needed)
-if (window.innerWidth > 768) {
-  // Only run typing animation for larger screens
+
   animateText(0);
-} else {
-  // For small screens, immediately display the full text without animation
-  lineElements.forEach((lineElement, index) => {
-    lineElement.textContent = textLines[index];
-    lineElement.style.opacity = "1"; // Ensure text is visible
-  });
-}
+
 
 
 function downloadPortfolio() {

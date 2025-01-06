@@ -1624,17 +1624,13 @@ textarea.form-input::-webkit-resizer {
     background: var(--eerie-black-2);
 
   }
-  
+
   
   .sidebar {
     max-height: 200px;
     margin-bottom: 15px;
     animation: slideOnn 0.5s ease;
 
-  }
-  .about-text p {
-    transition: none; /* Disable typing animation */
-    opacity: 1; /* Ensure text is visible immediately */
   }
 
   .service-container-cer {
