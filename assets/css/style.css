@@ -477,10 +477,15 @@ main {
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  border: solid 10px var(--onyx);
-  transition: border-color 0.3s ease, opacity 0.3s ease;
-  /* Smooth transition for opacity */
+  border: solid 1px var(--jet);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
+
+.avatar-box img:hover {
+  transform: scale(1.05); /* Smooth scaling */
+  cursor: pointer;
+}
+
 
 /* Keyframes for cool rotation animation */
 /* Keyframes for smooth rotation */
