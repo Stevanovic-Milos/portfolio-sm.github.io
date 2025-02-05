@@ -1,6 +1,5 @@
 'use strict';
 
-// Ensure that the function is declared only once
 const elementToggleFunc = function(elem) {
   elem.classList.toggle("active");
 };
@@ -26,7 +25,6 @@ const testimonialsModalFunc = function() {
   overlay.classList.toggle("active");
 };
 
-// Loop to handle testimonial item clicks
 for (let i = 0; i < testimonialsItem.length; i++) {
   testimonialsItem[i].addEventListener("click", function() {
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
@@ -179,24 +177,21 @@ function animateText(index) {
   }, 20);
 }
 
-// Check if the screen size is smaller than 768px (adjust as needed)
 if (window.innerWidth > 768) {
-  // Only run typing animation for larger screens
   animateText(0);
 } else {
-  // For small screens, immediately display the full text without animation
   lineElements.forEach((lineElement, index) => {
     lineElement.textContent = textLines[index];
-    lineElement.style.opacity = "1"; // Ensure text is visible
+    lineElement.style.opacity = "1"; 
   });
 }
 
 
 function downloadPortfolio() {
   const link = document.createElement('a');
-  link.href = 'portfolioMS.pdf'; // Path to the portfolio file
-  link.download = 'portfolioMS.pdf'; // The name the file will have when downloaded
-  link.click(); // Simulates a click to trigger the download
+  link.href = 'portfolioMS.pdf'; 
+  link.download = 'portfolioMS.pdf';
+  link.click();
 }
 document.addEventListener("DOMContentLoaded", () => {
   const skillItems = document.querySelectorAll(".skill-item");
@@ -206,11 +201,11 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // Stop observing once it's visible
+          observer.unobserve(entry.target); 
         }
       });
     }, {
-      threshold: 0., // Trigger when 20% of the element is visible
+      threshold: 0., 
     }
   );
 
@@ -231,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }, {
-      threshold: 0.5, // Adjust threshold as needed
+      threshold: 0.5, 
     }
   );
 
@@ -250,7 +245,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }, {
-      threshold: 0.5, // Adjust to control when the animation starts (50% visibility)
+      threshold: 0.5, 
     }
   );
 
@@ -265,14 +260,13 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          // Add `visible` class with delay for each row
           setTimeout(() => {
             entry.target.classList.add("visible");
-          }, index * 150); // Stagger delay between items
+          }, index * 150);
         }
       });
     }, {
-      threshold: 0.1, // Adjust to control when the animation starts
+      threshold: 0.1,
     }
   );
 
@@ -284,14 +278,14 @@ window.addEventListener('load', function() {
   particlesJS("particles-js", {
     particles: {
       number: {
-        value: 100, // Reduce particle count for mobile
+        value: 100, 
         density: {
           enable: true,
           value_area: 800
         }
       },
       size: {
-        value: 3, // Adjust particle size
+        value: 3,
         random: true
       },
       move: {
@@ -312,30 +306,23 @@ button.addEventListener('click', () => {
 });
 
 /*image rotation*/
-// Ensure 'avatar' is only declared once
 const avatar = document.getElementById('avatar');
-let currentIndex = 0; // Track the current image index
-
-// Define the image paths
+let currentIndex = 0; 
 const images = ['./assets/images/ME2.webp','./assets/images/me.jpg'];
 
 avatar.addEventListener('click', () => {
-  // Add animation class to trigger the spin
   avatar.classList.add('animate');
 
-  // Wait for the animation duration to swap the image
   setTimeout(() => {
-    // Cycle through the images array
-    currentIndex = (currentIndex + 1) % images.length; // This ensures it loops back to the first image
+    currentIndex = (currentIndex + 1) % images.length; 
     avatar.src = images[currentIndex];
-  }, 10); // Wait until halfway through the 0.8s animation
+  }, 10); 
 
-  // Remove the animation class after the animation ends
   avatar.addEventListener(
     'animationend',
     () => {
       avatar.classList.remove('animate');
     },
-    { once: true } // Ensures the event listener is removed after firing
+    { once: true } 
   );
 });
