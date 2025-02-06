@@ -17,14 +17,15 @@ I have invested significant time in designing and developing this website, ensur
 
 ## 📥 Installation & Usage
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/Stevanovic-Milos/portfolio-sm.github.io
    ```
 2. Navigate to the project directory:
+
    ```bash
    cd portfolio-sm.github.io
    ```
-3. Start the development and improve it for you.
   
 
 ## 🚀 Future Improvements
