@@ -1,79 +1,50 @@
 :root {
-  /* New Gradients */
+  /* Colors */
   --bg-gradient-onyx: linear-gradient(to bottom right,
       hsl(170, 40%, 20%) 5%,
-      /* A cool, dark teal */
       hsl(190, 30%, 15%) 95%
-      /* Darker, muted teal */
     );
 
   --bg-gradient-jet: linear-gradient(to bottom right,
       hsla(150, 5%, 10%, 0.4) 0%,
-      /* Soft, cool charcoal */
       hsla(180, 10%, 5%, 0) 100%),
     hsl(160, 15%, 7%);
-  /* Deep, smoky teal for a rich feel */
 
   --bg-gradient-yellow-1: linear-gradient(to bottom right,
       hsl(60, 100%, 50%) 0%,
-      /* Bright lemon yellow */
       hsla(50, 100%, 45%, 0) 50%);
 
   --bg-gradient-yellow-2: linear-gradient(135deg,
       hsla(60, 100%, 50%, 0.3) 0%,
-      /* Softer, golden yellow */
       hsla(55, 100%, 45%, 0) 60%),
     hsl(40, 30%, 10%);
-  /* Darker background with a golden tint */
 
   --border-gradient-onyx: linear-gradient(to bottom right,
       hsl(190, 30%, 10%) 0%,
-      /* Muted, dark teal border */
       hsla(180, 20%, 5%, 0) 50%);
 
   --text-gradient-yellow: linear-gradient(to right,
       hsl(60, 100%, 40%),
-      /* Deep lemon yellow */
       hsl(50, 90%, 45%)
-      /* Rich, golden yellow */
     );
 
-  /* New Solid Colors */
   --jet: hsl(210, 20%, 15%);
-  /* Cool, dark slate gray */
-  
   --onyx: hsl(160, 20%, 10%);
-  /* Dark teal with subtle tones */
   --eerie-black-1: hsl(200, 15%, 7%);
-  /* Darker, muted blue-black */
   --eerie-black-2: hsl(190, 10%, 5%);
-  /* Very dark blue with almost black shades */
   --smoky-black: hsl(0, 0%, 3%);
-  /* Deep, almost pure black */
   --white-1: hsl(0, 0%, 98%);
-  /* Off-white for a soft, subtle contrast */
   --white-2: hsl(0, 0%, 85%);
-  /* Muted white with a light cream tint */
   --orange-yellow-crayola: hsl(45, 100%, 58%);
-  /* Slightly darker, burnt yellow */
   --vegas-gold: hsl(45, 60%, 50%);
-  /* Warm, medium gold */
   --light-gray: hsl(0, 0%, 70%);
-  /* Neutral, balanced gray */
   --light-gray-70: hsla(0, 0%, 70%, 0.7);
-  /* Semi-transparent light gray */
   --bittersweet-shimmer: hsl(10, 70%, 60%);
-  /* Warm reddish amber with a golden tone */
 
-
-  /**
-   * typography
-   */
 
   /* font-family */
   --ff-poppins: "Poppins", sans-serif;
 
-  /* font-size */
   --fs-1: 24px;
   --fs-2: 18px;
   --fs-3: 17px;
@@ -83,15 +54,11 @@
   --fs-7: 13px;
   --fs-8: 11px;
 
-  /* font-weight */
   --fw-300: 300;
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
 
-  /**
-   * shadow
-   */
 
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
@@ -99,18 +66,10 @@
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
   --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
 
-  /**
-   * transition
-   */
-
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
 }
 
-
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
 
 *,
 *::before,
@@ -186,9 +145,7 @@ body {
 
 
 
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
+/*Style for sidebar*/
 
 .sidebar,
 article {
@@ -207,27 +164,18 @@ article {
   color: var(--light-gray);
 }
 
-
-
-/* CSS for the separator */
 .separator {
   width: 100%;
   height: 2px;
-  /* Adjust thickness as needed */
   background-color: rgba(255, 255, 255, 0.1);
-  /* Adjust color as needed */
   margin: 20px 0;
-  /* Adjust spacing as needed */
 }
 
 .separator1 {
   width: 100%;
   height: 2px;
-  /* Adjust thickness as needed */
   background-color: rgba(255, 255, 255, 0.1);
-  /* Adjust color as needed */
   margin: 20px 0;
-  /* Adjust spacing as needed */
 }
 
 .icon-box {
@@ -245,10 +193,8 @@ article {
   z-index: 1;
 }
 
-/* Define hover effect to reveal the underline */
 .icon-box:hover::after {
   width: 100%;
-  /* Fully visible on hover */
 }
 
 .icon-box img {
@@ -263,22 +209,25 @@ article {
 article.active {
   display: block;
 }
+
 @keyframes slideInn {
   0% {
-    transform: translateY(50vh); /* Start at the original position */
+    transform: translateY(50vh); 
   }
   100% {
-    transform: translateY(0); /* Slide back up to the original position */
+    transform: translateY(0); 
   }
 }
+
 @keyframes slideInnn {
   0% {
-    transform: translateY(0vh); /* Start at the original position */
+    transform: translateY(0vh);
   }
   100% {
-    transform: translateY(50vh); /* Slide back up to the original position */
+    transform: translateY(50vh); 
   }
 }
+
 @keyframes slideside {
   0% {
     transform: translateY(100%);
@@ -288,6 +237,7 @@ article.active {
     transform: translateY(0%);
   }
 }
+
 @keyframes slideOnn {
   0% {
     transform: translateY(-50vh);
@@ -343,9 +293,7 @@ article.active {
 
 .has-scrollbar::-webkit-scrollbar {
   width: 5px;
-  /* for vertical scrollbar */
   height: 5px;
-  /* for horizontal scrollbar */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -382,9 +330,7 @@ article.active {
   z-index: -1;
 }
 
-/*-----------------------------------*\
-  #MAIN
-\*-----------------------------------*/
+
 
 main {
   margin: 15px 12px;
@@ -392,9 +338,7 @@ main {
   min-width: 259px;
 }
 
-/*-----------------------------------*\
-  #SIDEBAR
-\*-----------------------------------*/
+
 
 /* Sidebar Styling */
 .sidebar {
@@ -407,31 +351,22 @@ main {
   
 }
 
-
 .sidebar.active {
   max-height: 1000px;
-
-  
 }
 
-/* Sidebar Info Styling */
 .sidebar-info {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  /* Added padding for better spacing */
 }
-
 
 /* Avatar Image Styling */
 .avatar-box {
   display: inline-block;
   perspective: 1000px;
-  /* Ensures the 3D effect is visible */
-
-
 }
 
 .avatar-box img {
@@ -444,17 +379,13 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
-
-
-
-/* Keyframes for cool rotation animation */
-/* Keyframes for smooth rotation */
+/* Keyframes for rotation */
 @keyframes smooth-rotate {
   0% {
-    transform: rotate(0deg); /* Start with no rotation */
+    transform: rotate(0deg); 
   }
   50% {
-    transform: rotate(180deg) scale(0.8) ; /* Halfway, rotate 180 degrees and slightly grow */
+    transform: rotate(180deg) scale(0.8) ; 
   }
   100% {
     transform: rotate(360deg);
@@ -462,15 +393,12 @@ main {
   }
 }
 
-/* Apply smooth rotation animation */
+/* Apply rotation animation */
 .avatar-box img.animate {
   animation: smooth-rotate 0.5s linear ; /* Smooth rotation, infinite loop */
   transform-origin: center; /* Rotate around the center */
   animation-delay: 0.01s; 
 }
-
-
-
 
 .info-content .name {
   color: var(--white-2);
@@ -535,10 +463,6 @@ main {
 .info_more-btn.opened:hover {
   background: var(--bg-gradient-light); /* Different background when opened and hovered */
 }
-
-
-
-
 
 .sidebar-info_more {
   opacity: 0;
@@ -611,16 +535,12 @@ main {
   color: var(--light-gray-70);
   font-size: 18px;
   text-decoration: none;
-  /* Optional: remove default underline */
 }
 
 .social-item .social-link img {
   width: 22px;
-  /* Adjust as needed */
   height: 22px;
-  /* Adjust as needed */
   transition: width 0.5s, height 0.7s;
-  /* Smooth transition for width and height */
 }
 
 .social-item .social-link img:hover {
@@ -628,9 +548,7 @@ main {
   height: 34px;
 }
 
-/*-----------------------------------*\
-  #NAVBAR
-\*-----------------------------------*/
+/*Navbar style*/
 .navbar {
   position: fixed;
   bottom: 0;
@@ -654,7 +572,6 @@ main {
 
 .navbar-item {
   margin-right: 20px;
-  /* Adjust spacing between navbar items */
 }
 
 .navbar-link {
@@ -664,7 +581,6 @@ main {
   padding: 20px 7px;
   transition: color var(--transition-1);
   text-decoration: none;
-  /* Remove default underline */
   cursor: pointer;
 }
 
@@ -672,19 +588,15 @@ main {
   content: "";
   position: absolute;
   bottom: -3px;
-  /* Adjust the distance from the text */
   left: 0;
   width: 0;
   height: 2px;
   background-color: yellow;
-  /* Change underline color to yellow */
   transition: width 0.3s ease;
-  /* Adjust animation speed */
 }
 
 .navbar-link:hover::after,
 .navbar-link.active::after {
-  /* Ensure underline remains for active links */
   width: 50%;
 }
 
@@ -695,13 +607,9 @@ main {
 
 .navbar-link.active {
   color: yellow;
-  /* Change active link color to yellow */
 }
 
-/*-----------------------------------*\
-  #ABOUT
-\*-----------------------------------*/
-
+/*About style*/
 .about .article-title {
   margin-bottom: 15px;
 }
@@ -717,25 +625,21 @@ main {
   margin-bottom: 15px;
 }
 
-/**
- * #service 
- */
-
-.service {
+.skill {
   margin-bottom: 35px;
 }
 
-.service-title {
+.skill-title {
   margin-bottom: 20px;
 }
 
-.service-list {
+.skill-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.service-item {
+.skill-item {
   position: relative;
   background: var(--border-gradient-onyx);
   padding: 20px;
@@ -743,20 +647,17 @@ main {
   box-shadow: var(--shadow-2);
   z-index: 1;
 
-  /* Start off-screen and hidden */
   transform: translateY(50px);
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.service-item.visible {
-  transform: translateY(0); /* Slide into original position */
-  opacity: 1; /* Fully visible */
+.skill-item.visible {
+  transform: translateY(0); 
+  opacity: 1; 
 }
 
-
-
-.service-item::before {
+.skill-item::before {
   content: "";
   position: absolute;
   inset: 1px;
@@ -765,34 +666,30 @@ main {
   z-index: -1;
 }
 
-.service-icon-box {
+.skill-icon-box {
   margin-bottom: 10px;
 }
 
-.service-icon-box img {
+.skill-icon-box img {
   width: 40px;
   height: auto;
   margin: auto;
 }
 
-.service-content-box {
+.skill-content-box {
   text-align: center;
 }
 
-.service-item-title {
+.skill-item-title {
   margin-bottom: 7px;
 }
 
-.service-item-text {
+.skill-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
 }
-
-/**
- * #testimonials 
- */
 
 .testimonials {
   margin-bottom: 30px;
@@ -820,13 +717,11 @@ main {
 @keyframes slideIn {
   from {
     transform: translateX(30px);
-    /* Smaller offset for a more subtle slide */
     opacity: 0;
   }
 
   to {
     transform: translateX(0);
-    /* End at original position */
     opacity: 1;
   }
 }
@@ -842,7 +737,6 @@ main {
 .testimonials-item.visible {
   animation: slideIn 0.5s ease forwards;
 }
-
 
 .testimonials-avatar-box {
   position: absolute;
@@ -877,31 +771,24 @@ main {
   overflow: hidden;
 }
 
-/* Width */
 .testimonials-list::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 .testimonials-list::-webkit-scrollbar-track {
   background: #888;
   /* Change this to your desired color */
 }
 
-/* Handle */
 .testimonials-list::-webkit-scrollbar-thumb {
   background: yellow;
 }
 
-/* Handle on hover */
 .testimonials-list::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-/**
- * #testimonials-modal
- */
-
+/*Modal style*/
 .modal-container {
   position: fixed;
   top: 0;
@@ -917,21 +804,16 @@ main {
   pointer-events: none;
   visibility: hidden;
   scrollbar-width: thin;
-  /* "auto" or "thin" will show the scrollbar */
   scrollbar-color: yellow hsla(240, 1%, 17%, 0.75);
-  /* thumb color track color */
 }
 
 .modal-container::-webkit-scrollbar {
   width: 10px;
-  /* Width of the scrollbar */
 }
 
 .modal-container::-webkit-scrollbar-thumb {
   background-color: yellow;
-  /* Color of the scrollbar thumb */
   border-radius: 10px;
-  /* Rounded corners for the thumb */
 }
 
 .modal-container.active {
@@ -1027,35 +909,27 @@ main {
   line-height: 1.6;
 }
 
-/*-----------------------------------*\
-  #RESUME
-\*-----------------------------------*/
-
+/*Resume style*/
 .article-title {
   margin-bottom: 30px;
 }
 
-/**
- * education and experience 
- */
-
-.timeline {
+.edu_cert {
   margin-bottom: 30px;
 }
 
-.timeline .title-wrapper {
+.edu_cert .title-wrapper {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-bottom: 25px;
 }
 
-.timeline-list {
+.edu_cert-list {
   font-size: var(--fs-6);
   margin-left: 45px;
 }
 
-/* Keyframes for fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1068,36 +942,33 @@ main {
   }
 }
 
-/* Initial state for timeline items */
-.timeline-item {
+.edu_cert-item {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Add the `visible` class to trigger the animation */
-.timeline-item.visible {
+.edu_cert-item.visible {
   animation: fadeIn 0.8s ease forwards;
 }
 
-
-.timeline-item:not(:last-child) {
+.edu_cert-item:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.timeline-item-title {
+.edu_cert-item-title {
   font-size: var(--fs-6);
   line-height: 1.3;
   margin-bottom: 7px;
 }
 
-.timeline-list span {
+.edu_cert-list span {
   color: yellow;
   font-weight: var(--fw-400);
   line-height: 1.6;
 }
 
-.timeline-item:not(:last-child)::before {
+.edu_cert-item:not(:last-child)::before {
   content: "";
   position: absolute;
   top: -25px;
@@ -1107,7 +978,7 @@ main {
   background: var(--jet);
 }
 
-.timeline-item::after {
+.edu_cert-item::after {
   content: "";
   position: absolute;
   top: 5px;
@@ -1119,30 +990,25 @@ main {
   box-shadow: 0 0 0 4px var(--jet);
 }
 
-.timeline-text {
+.edu_cert-text {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
 
-/*certificates*/
-/* Container for the service items */
-.service-container-cer {
+.skill-container-cer {
   padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-/* Container for the service items */
-.service-container-cer {
+.skill-container-cer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-/* Style for each service item */
-/* Keyframes for slide-in from left */
 @keyframes slideInFromLeft {
   from {
     opacity: 0;
@@ -1155,48 +1021,40 @@ main {
   }
 }
 
-/* Initial state for service items */
-.service-item-cer {
+.skill-item-cer {
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   margin-top: 20px;
 }
 
-/* Add visible class to trigger animation */
-.service-item-cer.visible {
+.skill-item-cer.visible {
   animation: slideInFromLeft 0.5s ease forwards;
 }
 
-/* Optional: Adding staggered delay for the animation */
-.service-item-cer:nth-child(odd) {
+.skill-item-cer:nth-child(odd) {
   animation-delay: 0.2s;
 }
 
-.service-item-cer:nth-child(even) {
+.skill-item-cer:nth-child(even) {
   animation-delay: 0.4s;
 }
 
-
-/* Style for service icons */
-.service-icon-box-cer {
+.skill-icon-box-cer {
   position: relative;
   width: 100%;
   border-radius: 30px;
   overflow: hidden;
 }
 
-.service-icon-box-cer img {
+.skill-icon-box-cer img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 14px;
 }
 
-/*-----------------------------------*\
-  #PORTFOLIO
-\*-----------------------------------*/
-
+/*Portfolio Style*/
 .filter-list .filter-item {
   position: relative;
   color: yellow;
@@ -1207,69 +1065,38 @@ main {
   position: absolute;
   left: 0;
   bottom: -3px;
-  /* Adjust as needed */
   width: 100%;
   height: 2px;
   background-color: yellow;
-  /* Change to your desired color */
 }
 
 .filter-list {
   display: flex;
 }
 
-/* Center the button on the page */
-/* Container for the button */
-
-
-/* Styling for the download button */
 .download-btn {
   position: relative;
   background: var(--eerie-black-2);
-  /* Matching background */
   color: yellow;
-  /* Yellow text */
   padding: 8px 12px;
-  /* Reduced padding for a smaller button */
   border: 1px solid var(--jet);
-  /* Border color */
   border-radius: 8px;
-  /* Reduced border radius for less rounded corners */
   font-size: var(--fs-7);
-  /* Smaller font size */
   font-weight: var(--fw-300);
-  /* Same font weight */
   cursor: pointer;
-  /* Pointer cursor */
   transition: all 0.3s ease;
-  /* Smooth transition */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Center-align content vertically */
   overflow: hidden;
-  /* Ensures the arrow stays within the button bounds */
-  /* Centers horizontally and reduces gap above */
   width: max-content;
-  /* Adjusts to content width */
 }
 
-
-
-/* Hover effect for the button */
 .download-btn:hover {
   background: var(--bg-gradient-jet);
-  /* Darken the background on hover */
   transform: scale(1.1);
-  /* Make the button slightly bigger */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  /* Subtle shadow effect on hover */
 }
-
-
-
-
-
 
 .filter-select-box {
   position: relative;
@@ -1292,7 +1119,6 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   cursor: pointer;
-  /* Add cursor pointer for better UX */
 }
 
 .filter-select.active .select-icon {
@@ -1330,7 +1156,6 @@ main {
   padding: 8px 10px;
   border-radius: 8px;
   cursor: pointer;
-  /* Add cursor pointer for better UX */
 }
 
 .select-item button:hover {
@@ -1354,10 +1179,8 @@ main {
   color: yellow;
 }
 
-/* Add hover effect for project items */
 .project-item:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  /* Add box shadow on hover */
 }
 
 @keyframes scaleUp {
@@ -1427,17 +1250,11 @@ main {
 
 .project-img img {
   width: 100%;
-  /* Make the image take up the full width of its container */
   height: auto;
-  /* Automatically adjust height to preserve the aspect ratio */
   aspect-ratio: 5 / 4;
-  /* Ensures all images maintain a 250px by 200px ratio */
   object-fit: cover;
-  /* Crop the image to fit within the defined ratio */
   transition: var(--transition-1);
-  /* Keeps the transition for hover effects or changes */
   box-sizing: border-box;
-  /* Prevents padding/border issues */
 }
 
 .project-item>a:hover img {
@@ -1463,10 +1280,7 @@ main {
   font-weight: var(--fw-300);
 }
 
-/*-----------------------------------*\
-  #CONTACT
-\*-----------------------------------*/
-
+/*Contact style*/
 .mapbox {
   position: relative;
   height: 250px;
@@ -1590,18 +1404,8 @@ textarea.form-input::-webkit-resizer {
   background: var(--bg-gradient-jet);
 }
 
-/*-----------------------------------*\
-  #RESPONSIVE
-\*-----------------------------------*/
-
-/**
- * responsive larger than 450px screen
- */
-
+/*Responsive style*/
  @media (min-width: 250px) {
-  /**
-   * client
-   */
 
   .Languges-item-item {
     min-width: calc(33.33% - 10px);
@@ -1621,7 +1425,6 @@ textarea.form-input::-webkit-resizer {
 
   }
 
-  
   .sidebar {
     max-height: 200px;
     margin-bottom: 15px;
@@ -1629,9 +1432,8 @@ textarea.form-input::-webkit-resizer {
 
   }
 
-  .service-container-cer {
+  .skill-container-cer {
     display: flex;
-    /* Ensure items are flex items */
   }
 
   .download-btn {
@@ -1639,13 +1441,10 @@ textarea.form-input::-webkit-resizer {
     justify-content: flex-start;
   }
 
-  .service-container-cer>* {
+  .skill-container-cer>* {
     width: 100%;
-    /* Ensure each item takes the full width of the container */
     box-sizing: border-box;
-    /* Prevent padding/borders from affecting layout */
   }
-
 
   .sidebar.active {
     max-height: 584px;
@@ -1656,10 +1455,7 @@ textarea.form-input::-webkit-resizer {
     height: 150px;
   }
 
-  /**
-   * #PORTFOLIO, BLOG 
-   */
-
+  /*portfolio*/
   .project-img,
   .blog-banner-box {
     height: auto;
@@ -1671,19 +1467,9 @@ textarea.form-input::-webkit-resizer {
 
 }
 
-/**
- * responsive larger than 580px screen
- */
-
 @media (min-width: 580px) {
-  /**
-   * CUSTOM PROPERTY
-   */
 
   :root {
-    /**
-     * typography
-     */
 
     --fs-1: 32px;
     --fs-2: 24px;
@@ -1694,17 +1480,12 @@ textarea.form-input::-webkit-resizer {
     --fs-8: 12px;
   }
 
-  /**
-   * #REUSED STYLE
-   */
-
   .sidebar,
   article {
     width: 520px;
     margin-inline: auto;
     padding: 30px;
   }
-
 
   .article-title {
     font-weight: var(--fw-600);
@@ -1728,18 +1509,10 @@ textarea.form-input::-webkit-resizer {
     height: 170px;
   }
 
-  /**
-   * #MAIN
-   */
-
   main {
     margin-top: 60px;
     margin-bottom: 100px;
   }
-
-  /**
-   * #SIDEBAR
-   */
 
   .sidebar {
     max-height: 300px;
@@ -1753,7 +1526,6 @@ textarea.form-input::-webkit-resizer {
   .sidebar-info {
     gap: 25px;
   }
-
 
   .info-content .name {
     margin-bottom: 15px;
@@ -1770,8 +1542,8 @@ textarea.form-input::-webkit-resizer {
     padding: 10px 15px;
     background: var(--bg-gradient-jet);
     color: white;
-    border-radius: 8px; /* Slightly rounded corners for a modern look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     cursor: pointer;
   }
@@ -1796,8 +1568,7 @@ textarea.form-input::-webkit-resizer {
     border-radius: inherit;
     transition: transform 0.3s ease, background 0.3s ease; /* Animation for the pseudo-element */
   }
-  
-  /* Hover Animation */
+
   .info_more-btn:hover {
     background: var(--bg-gradient-dark); /* Change background on hover */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Intensify shadow on hover */
@@ -1813,7 +1584,6 @@ textarea.form-input::-webkit-resizer {
     background: var(--bg-gradient-light); /* Lighten the background gradient */
   }
   
-  /* Click Animation */
   .info_more-btn:active {
     transform: scale(0.95); /* Slightly shrink button on click for a pressed effect */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Slightly reduce shadow on click */
@@ -1837,10 +1607,6 @@ textarea.form-input::-webkit-resizer {
     width: calc(100% - 64px);
   }
 
-  /**
-   * #NAVBAR
-   */
-
   .navbar {
     border-radius: 20px 20px 0 0;
   }
@@ -1853,10 +1619,6 @@ textarea.form-input::-webkit-resizer {
     --fs-8: 14px;
   }
 
-  /**
-   * #ABOUT
-   */
-
   .about .article-title {
     margin-bottom: 20px;
   }
@@ -1865,9 +1627,7 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 40px;
   }
 
-  /* service */
-
-  .service-item {
+  .skill-item {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1875,17 +1635,16 @@ textarea.form-input::-webkit-resizer {
     padding: 30px;
   }
 
-  .service-icon-box {
+  .skill-icon-box {
     margin-bottom: 0;
     margin-top: 5px;
   }
 
-  .service-content-box {
+  .skill-content-box {
     text-align: left;
   }
 
   /* testimonials */
-
   .testimonials-title {
     margin-bottom: 25px;
   }
@@ -1921,8 +1680,6 @@ textarea.form-input::-webkit-resizer {
     -webkit-line-clamp: 2;
   }
 
-  /* testimonials modal */
-
   .modal-container {
     padding: 20px;
   }
@@ -1957,19 +1714,15 @@ textarea.form-input::-webkit-resizer {
     width: 35px;
   }
 
-  /**
-   * #RESUME
-   */
-
-  .timeline-list {
+  .edu_cert-list {
     margin-left: 65px;
   }
 
-  .timeline-item:not(:last-child)::before {
+  .edu_cert-item:not(:last-child)::before {
     left: -40px;
   }
 
-  .timeline-item::after {
+  .edu_cert-item::after {
     height: 8px;
     width: 8px;
     left: -43px;
@@ -1979,35 +1732,29 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 25px;
   }
 
-  /*certificate responsive*/
-  /* Common styles for service container */
-  .service-container-cer {
+  .skill-container-cer {
     padding-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  /* Style for each service item */
-  .service-item-cer {
+  .skill-item-cer {
     width: calc(50% - 20px);
-    /* Adjust as needed */
     margin-bottom: 20px;
-    /* Adjust spacing between rows */
     overflow: hidden;
     position: relative;
     border-radius: 14px;
   }
 
-  /* Style for service icons */
-  .service-icon-box-cer {
+  .skill-icon-box-cer {
     position: relative;
     width: 100%;
     border-radius: 30px;
     overflow: hidden;
   }
 
-  .service-icon-box-cer img {
+  .skill-icon-box-cer img {
     width: 100%;
     height: auto;
     display: block;
@@ -2015,14 +1762,7 @@ textarea.form-input::-webkit-resizer {
   }
 }
 
-/**
- * responsive larger than 768px screen
- */
-
 @media (min-width: 768px) {
-  /**
-   * REUSED STYLE
-   */
 
   .sidebar,
   article {
@@ -2036,10 +1776,6 @@ textarea.form-input::-webkit-resizer {
     width: 100px;
   }
 
-  /**
-   * SIDEBAR
-   */
-
   .contacts-list {
     grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
@@ -2050,19 +1786,9 @@ textarea.form-input::-webkit-resizer {
     justify-content: flex-start;
   }
 
-  /**
-   * NAVBAR
-   */
-
   .navbar-link {
     --fs-8: 15px;
   }
-
-  /**
-   * ABOUT
-   */
-
-  /* testimonials modal */
 
   .testimonials-modal {
     gap: 35px;
@@ -2077,11 +1803,6 @@ textarea.form-input::-webkit-resizer {
     width: 200px;
     height: 200px;
   }
-
-
-  /**
-   * PORTFOLIO
-   */
 
   .article-title {
     padding-bottom: 20px;
@@ -2100,40 +1821,34 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 30px;
   }
 
-  /* Common styles for service container */
-  .service-container-cer {
+  .skill-container-cer {
     padding-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  /* Style for each service item */
-  .service-item-cer {
+  .skill-item-cer {
     width: calc(50% - 20px);
-    /* Adjust as needed */
     margin-bottom: 20px;
-    /* Adjust spacing between rows */
     overflow: hidden;
     position: relative;
     border-radius: 14px;
   }
 
-  /* Style for service icons */
-  .service-icon-box-cer {
+  .skill-icon-box-cer {
     position: relative;
     width: 100%;
     border-radius: 30px;
     overflow: hidden;
   }
 
-  .service-icon-box-cer img {
+  .skill-icon-box-cer img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 14px;
   }
-
 
   .filter-item button {
     color: var(--light-gray);
@@ -2149,15 +1864,9 @@ textarea.form-input::-webkit-resizer {
     color: yellow;
   }
 
-  /* portfolio and blog grid */
-
   .project-list {
     grid-template-columns: 1fr 1fr;
   }
-
-  /**
-   * CONTACT
-   */
 
   .input-wrapper {
     grid-template-columns: 1fr 1fr;
@@ -2169,38 +1878,20 @@ textarea.form-input::-webkit-resizer {
   }
 }
 
-/**
- * responsive larger than 1024px screen
- */
-
 @media (min-width: 1024px) {
-  /**
-   * CUSTOM PROPERTY
-   */
 
   :root {
-    /**
-    * shadow
-    */
 
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
     --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
   }
 
-  /**
-   * REUSED STYLE
-   */
-
   .sidebar,
   article {
     width: 950px;
     box-shadow: var(--shadow-5);
   }
-
-  /**
-   * MAIN 
-   */
 
   main {
     margin-bottom: 60px;
@@ -2211,10 +1902,6 @@ textarea.form-input::-webkit-resizer {
     width: max-content;
     margin: auto;
   }
-
-  /**
-   * NAVBAR
-   */
 
   .navbar {
     position: absolute;
@@ -2237,49 +1924,25 @@ textarea.form-input::-webkit-resizer {
     font-weight: var(--fw-500);
   }
 
-  /**
-   * ABOUT
-   
-   */
-
-  /* service */
-
-  .service-list {
+  .skill-list {
     grid-template-columns: 1fr 1fr;
     gap: 20px 25px;
   }
-
-  /* testimonials */
 
   .testimonials-item {
     min-width: calc(50% - 15px);
   }
 
-  /**
-   * PORTFOLIO
-   */
-
   .project-list {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  /**
-   * BLOG
-   */
 
   .blog-banner-box {
     height: 230px;
   }
 }
 
-/**
- * responsive larger than 1250px screen
- */
-
 @media (min-width: 1250px) {
-  /**
-   * RESET
-   */
 
   body::-webkit-scrollbar {
     width: 20px;
@@ -2287,15 +1950,15 @@ textarea.form-input::-webkit-resizer {
   article.active {
     display: block;
     animation: none
-    ; /* Apply fade-in animation */
+    ; 
   }
   
   @keyframes fadeIn {
     from {
-      opacity: 0; /* Start fully transparent */
+      opacity: 0; 
     }
     to {
-      opacity: 1; /* End fully visible */
+      opacity: 1;
     }
   }
   
@@ -2319,10 +1982,6 @@ textarea.form-input::-webkit-resizer {
     height: 60px;
   }
 
-  /**
-   * REUSED STYLE
-   */
-
   .sidebar,
   article {
     width: auto;
@@ -2331,10 +1990,6 @@ textarea.form-input::-webkit-resizer {
   article {
     min-height: 100%;
   }
-
-  /**
-   * MAIN
-   */
 
   main {
     max-width: 1200px;
@@ -2351,10 +2006,6 @@ textarea.form-input::-webkit-resizer {
     margin: 0;
   }
 
-  /**
-   * SIDEBAR
-   */
-
   .sidebar {
     position: sticky;
     top: 60px;
@@ -2364,17 +2015,12 @@ textarea.form-input::-webkit-resizer {
     padding-top: 60px;
     z-index: 1;
     animation: slideside 0.8s ease;
-    
-      
-    
   }
 
   .sidebar-info {
     flex-direction: column;
   }
   
-
-
   .info-content .name {
     white-space: nowrap;
     text-align: center;
@@ -2417,11 +2063,7 @@ textarea.form-input::-webkit-resizer {
     justify-content: center;
   }
 
-  /**
-	 * RESUME
-	 */
-
-  .timeline-text {
+  .edu_cert-text {
     max-width: 700px;
   }
 
@@ -2434,7 +2076,6 @@ textarea.form-input::-webkit-resizer {
     justify-content: center;
     align-items: center;
     margin: 10px auto;
-
   }
 
   .avatar-box img:hover {

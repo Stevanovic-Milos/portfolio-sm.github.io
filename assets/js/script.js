@@ -199,7 +199,7 @@ function downloadPortfolio() {
   link.click(); // Simulates a click to trigger the download
 }
 document.addEventListener("DOMContentLoaded", () => {
-  const serviceItems = document.querySelectorAll(".service-item");
+  const skillItems = document.querySelectorAll(".skill-item");
 
   const observer = new IntersectionObserver(
     (entries, observer) => {
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-  serviceItems.forEach((item) => {
+  skillItems.forEach((item) => {
     observer.observe(item);
   });
 });
@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const timelineItems = document.querySelectorAll(".timeline-item");
+  const edu_certItems = document.querySelectorAll(".edu_cert-item");
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -254,12 +254,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-  timelineItems.forEach((item) => {
+  edu_certItems.forEach((item) => {
     observer.observe(item);
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const serviceItems = document.querySelectorAll(".service-item-cer");
+  const skillItems = document.querySelectorAll(".skill-item-cer");
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-  serviceItems.forEach((item) => {
+  skillItems.forEach((item) => {
     observer.observe(item);
   });
 });
