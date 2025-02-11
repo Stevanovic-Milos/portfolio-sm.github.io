@@ -284,6 +284,9 @@ window.addEventListener('load', function() {
           value_area: 800
         }
       },
+      color: {
+        value: ["#8CAAEE", "#89B4FA", "#74C7EC"] 
+      },
       size: {
         value: 3,
         random: true
