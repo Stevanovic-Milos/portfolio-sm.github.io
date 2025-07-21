@@ -367,7 +367,6 @@ main {
   padding: 10px;
 }
 
-/* Avatar Image Styling */
 .avatar-box {
   display: inline-block;
   perspective: 1000px;
@@ -378,7 +377,7 @@ main {
   height: 190px;
   object-fit: cover;
   display: block;
-  border-radius: 14px;
+  border-radius: 1000px;
   border: 1px solid var(--jet);
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }

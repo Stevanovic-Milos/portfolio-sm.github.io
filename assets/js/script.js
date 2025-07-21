@@ -150,8 +150,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 const textLines = [
-  "Success is not just about doing things; it's about doing them right.",
-  " Hi there! I'm Milos, a diligent student with a passion for learning and a commitment to excellence. Welcome to my portfolio, where you'll find a showcase of my journey and capabilities. Let's connect and explore how I can contribute to your team's success."
+  "Don’t judge my code — it’s a deadline survival story, not a masterpiece.",
+  " Hi, I’m Milos, a full stack developer who’s focused on building solid, practical solutions. This portfolio shows what I’ve worked on and what I’m capable of. Let’s connect and see how I can help your team."
 ];
 
 const lineElements = document.querySelectorAll(".about-text p");
