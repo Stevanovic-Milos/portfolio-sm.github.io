@@ -1282,6 +1282,12 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
+/*Blog*/
+
+.blog-web{
+  width: 100%;
+  height: 100vh;
+}
 
 /*Contact style*/
 .mapbox {
