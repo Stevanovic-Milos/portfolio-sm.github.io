@@ -1154,6 +1154,22 @@ main {
   pointer-events: all;
 }
 
+.select-item button {
+  background: var(--eerie-black-2);
+  color: #8caaee;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  text-transform: capitalize;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.select-item button:hover {
+  background: hsl(240, 2%, 20%);
+}
+
 
 .project-list {
   display: grid;
