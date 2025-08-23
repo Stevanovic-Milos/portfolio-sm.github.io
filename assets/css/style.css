@@ -1740,6 +1740,24 @@ textarea.form-input::-webkit-resizer {
     -webkit-line-clamp: 2;
   }
 
+  .linkedin-button {
+    display: inline-flex;
+    gap: 8px;
+    border-radius: 8px;
+    color: var(--sapphire);
+    text-decoration: none;
+    transition: var(--transition-1);
+    margin-top: 5px;
+  }
+
+  .linkedin-button:hover {
+    color: var(--sapphire-hover);
+  }
+
+  .linkedin-icon {
+    font-size: 20px;
+  }
+
   .modal-container {
     padding: 14px;
   }
