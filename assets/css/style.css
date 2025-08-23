@@ -699,6 +699,24 @@ main {
   line-height: 1.6;
 }
 
+.linkedin-button {
+  display: inline-flex;
+  gap: 8px;
+  border-radius: 8px;
+  color: var(--sapphire);
+  text-decoration: none;
+  transition: var(--transition-1);
+  margin-top: 5px;
+}
+
+.linkedin-button:hover {
+  color: var(--sapphire-hover);
+}
+
+.linkedin-icon {
+  font-size: 20px;
+}
+
 .testimonials {
   margin-bottom: 30px;
 }
